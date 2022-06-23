@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editais</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@400;700&family=Monoton&family=Poiret+One&family=Righteous&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --azulclarinho : #1F7AB6;
+        --azulescurao : #206fa3;
+        --amarelogema : #F5D611;
+        --quasepreto : #202328;
+      }
+      body{
+        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-rows: 100px 0.9fr 1fr 1fr 0.4fr 0.4fr;
+      }
+      /*LINHA 3/4*/
+      #terceira{
+        padding: 0.5rem;
+        background-color: var(--azulclarinho);
+        grid-column: 1/3;
+        grid-row:3/4;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .secundaria{
+        padding: 5px;
+        padding-top: 30px;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 16vw;
+        min-width: 140px;
+        cursor: pointer;
+        transition: all .6s;
+        margin-bottom: 20px;
+    
+      }
+      .secundaria img{
+        max-width: 10vw;
+        min-width: 75px;
+      }
+      .secundaria:hover {
+        background-color: tomato;
+      }
+  
+      /*LINHA4/5*/
+      #segunda{
+        color:var(--amarelogema);
+        padding: 0.5rem;
+        background-color: tomato;
+        grid-row:4/5;
+        grid-column: 1/3;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        justify-content: space-around;
+      }
+      a p, a h3{
+        color: white;
+        text-decoration: none;
+      }
+      a{
+        text-decoration: none;
+      }
+      #segunda a{
+        width: 99%;
+      }
+      .primariadiv{
+        padding: 5px;
+        padding-top: 30px;
+        width: 99%;
+        background-color: rgba(12, 48, 71, 0.2);
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 5px 5px 10px rgba(12, 48, 71, 0.8);
+        cursor: pointer;
+        transition: all .6s;
+      }
+      .primariadiv img{
+        max-width: 100px;
+      }
+      .primariadiv:hover {
+        background-color: var(--azulescurao);
+      }
+      .relatoriosanuais{
+        padding: 5px;
+        padding-top: 30px;
+        width: auto;
+        max-width: 24vw;
+        min-width: 195px;
+        background-color: rgba(12, 48, 71, 0.2);
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 5px 5px 10px rgba(12, 48, 71, 0.8);
+        cursor: pointer;
+        transition: all .6s;
+      }
+      .relatoriosanuais img{
+        max-width: 100px;
+      }
+      .relatoriosanuais:hover {
+        background-color: tomato;
+      }
+      @media (max-width: 275px) {
+        .primariadiv{
+          min-width: 150px;
+      }
+      }
+      /*LINHA 5/6*/
+      #contato{
+        grid-column: 1/3;
+        grid-row: 5/6;
+      }
+      /*BARRA LATERAL*/
+      aside{
+        grid-column: 3/4;
+        grid-row: 3/5;
+      }
+      #precontato{
+        grid-column: 3/4;
+        grid-row: 5/6;
+      }
+      /*FOOTER*/
+      footer{
+        grid-column: 1/4;
+        /*grid-row: 6/7;*/
+      }
+      /*RESPOSIVIDADE LINHAS INDEX*/
+      @media (max-width: 1301px){
+        body{margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background: var(--azulescurao);
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-rows: 100px 0.3fr 1fr 0.6fr 0.4fr 0.4fr;
+        width: 100%;
+        }
+      }
+      @media (max-width: 565px){
+        body{margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background: var(--azulescurao);
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-rows: 100px 0.2fr 1fr 0.3fr 0.3fr 0.4fr;
+        width: 100%;
+        }
+      }
+      html, body {
+        height:100%;
+        width: 100%;
+        overflow-x: hidden;
+      }
+      footer {
+        position: relative end;
+        width: 100%;
+        padding-right: 30px;
+      
+      }
+      #cnpj {
+        padding-right: 30px;
+
+      }
+     
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/img/logoAEALcores2.png" id="titulo" alt="Associação Espírita André Luiz" ></a>
+        <nav id="menudesk">
+          <ul>
+            <li><a>Sobre</a>
+              <ul id="submenu">
+                <li><a href="diretoria.html">Diretoria</a></li>
+                <li><a href="editais.html">Editais</a></li>
+                <li><a href="estatuto.html">Estatuto</a></li>
+                <li><a href="historico.html">Histórico</a></li>
+                <li><a href="transparencia.html">Transparência</a></li>                      
+              </ul>
+            </li>
+            <li><a href="nananene.html">Nana Nenê</a></li>
+            <li><a href="livraria.html">Livraria</a></li>
+            <li><a href="apoio.html">Grupo de apoio</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
+            
+            
+          </ul>
+        </nav>
+        
+          <input type="checkbox" name="checkboxmenu" id="btmenu" class="btmenu">
+          <label for="btmenu" id="botao">&#9776;</label>
+          <!--<h3><a>MENU</a></h3>-->
+
+        <nav id="menuitens" class="menuitens">
+          <ul>
+            <li><a href="diretoria.html">Diretoria</a></li>
+            <li><a href="editais.html">Editais</a></li>
+            <li><a href="estatuto.html">Estatuto</a></li>
+            <li><a href="historico.html">Histórico</a></li>
+            <li><a href="transparencia.html">Transparência</a></li>
+            <li><a href="nananene.html">Nana Nenê</a></li>
+            <li><a href="livraria.html">Livraria</a></li>
+            <li><a href="apoio.html">Grupo de apoio</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
+          </ul>
+
+        </nav>
+        
+        
+    </header>
+      <div id="fundoheader"></div>
+      <section id="primeira">
+        <h1>Editais</h1>
+        <p> Acompanhe aqui todos nossos editais e atualizações sobre processos sobre novas oportunidades na AEAL.</p>
+      </section>
+      <article id="segunda">
+        <a href="assets/arquivos/nomedoedital.pdf"><div class="primariadiv"><h3>EDITAL ABERTO</h3>
+          <img src="assets/img/edital.png"/>
+          <p> Nome do edital</p>
+        </div></a>
+        
+          
+      </article>
+      <aside>
+        <!--<h3>Complementar</h3>
+        <p>Rs rsr sr srsrs sr rs rsrs srs rs rsrsrsrsr srrs srs rs sr srs srr rrs srs rs rs rs srs rs sr s</p> -->
+      </aside>
+      <section id="terceira">
+
+        <a href="assets/arquivos/nomedoedital.pdf"><div class="relatoriosanuais"><h3>EDITAL ENCERRADO</h3>
+        <img src="assets/img/edital.png"/>
+        <p> Nome do edital</p>
+      </div></a>
+      <a href="assets/arquivos/nomedoedital.pdf"><div class="relatoriosanuais"><h3>EDITAL ENCERRADO</h3>
+        <img src="assets/img/edital.png"/>
+        <p> Nome do edital</p>
+      </div></a>
+      <a href="assets/arquivos/nomedoedital.pdf"><div class="relatoriosanuais"><h3>EDITAL ENCERRADO</h3>
+        <img src="assets/img/edital.png"/>
+        <p> Nome do edital</p>
+      </div></a>
+      <a href="assets/arquivos/nomedoedital.pdf"><div class="relatoriosanuais"><h3>EDITAL ENCERRADO</h3>
+        <img src="assets/img/edital.png"/>
+        <p> Nome do edital</p>
+      </div></a>
+      <a href="assets/arquivos/nomedoedital.pdf"><div class="relatoriosanuais"><h3>EDITAL ENCERRADO</h3>
+        <img src="assets/img/edital.png"/>
+        <p> Nome do edital</p>
+      </div></a>
+      
+
+      </section>
+      <div id="precontato">
+        <h1>Desde <wbr> 1952</h1>
+      </div>
+      <section id="contato">
+        <h2>Contato:</h2>
+        <p><span class="enfase">Telefone:</span> <a href="tel:+551837221203">(18) 3722-1203</a></p>
+        <p><span class="enfase">E-mail:</span> <a href="mailto:aealcrechenananene@gmail.com">aealcreche<wbr>nananene<wbr>@gmail.com</a></p>
+        <p><span class="enfase">Endereço:</span> <a href="https://www.google.com/maps/place/R.+Rio+de+Janeiro,+1+-+Vila+Passarelli,+Andradina+-+SP,+16900-080/@-20.9084412,-51.3782461,15z/data=!4m5!3m4!1s0x9490ca9583f2dc93:0x3bf1fc87da22f05e!8m2!3d-20.909243!4d-51.368397">Rua Rio de Janeiro, nº 1.478 - Centro - ANDRADINA/SP</a></p>
+      </section>
+      <footer>
+        <div><a  href="#" id="cadeado"><img src="assets/img/cadeado.png" alt="Central administrativo da página." width="25"></a></div>
+        <div id="cnpj">
+          <p>ASSOCIAÇÃO ESPÍRITA ANDRÉ LUIZ - AEAL<br>
+          CNPJ nº 43.542.687 / 0001-08 - RCPJ. nº 29, EM 27/10/52 - CNAS nº 44006.002267 / 95-82 <br>
+          Declaração de Utilidade Pública: Decreto Estadual nº 9.535 / 77 - Lei Municipal nº 987/83    <br>
+          Mantenedora da Creche Nana Nenê, Clube de Mães e Departamento Feminino</p>
+        </div>
+        <div id="logosredes"><a href="https://www.instagram.com/crechebercarionananene/"><img src="assets/img/logofacebook.png" alt="Facebook" width="50"></a><a href="https://m.facebook.com/profile.php?id=100028222447923"><img src="assets/img/logoinstagram.png" alt="Instagram" width="50"></a></div>
+      </footer>
+    
+</body>
+</html>

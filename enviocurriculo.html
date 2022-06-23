@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate-se a um cargo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@400;700&family=Monoton&family=Poiret+One&family=Righteous&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --azulclarinho : #1F7AB6;
+        --azulescurao : #206fa3;
+        --amarelogema : #F5D611;
+        --quasepreto : #202328;
+      }
+      body{
+        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-rows: 100px 0.5fr 4.5fr 0.4fr 0.4fr;
+      }
+      /*LINHA 5/6*/
+      #contato{
+        grid-column: 1/3;
+        grid-row: 4/5;
+      }
+      /*BARRA LATERAL*/
+      aside{
+        grid-column: 3/4;
+        grid-row: 3/4;
+      }
+      #precontato{
+        grid-column: 3/4;
+        grid-row: 4/5;
+      }
+      /*FOOTER*/
+      footer{
+        grid-column: 1/4;
+        /*grid-row: 5/6;*/
+      }
+        /*HISTÓRICO*/
+      #matriculacorpo{
+        color: white;
+        padding: 20px;
+        background-color: tomato;
+        grid-row:3/4;
+        grid-column: 1/3;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        justify-content: space-around;
+        text-align: left;
+        font-size: 15px;
+        align-items: flex-start;
+      }
+      .cand, .fichacadastral{
+        margin-left: 20px;
+      }
+      .cand{
+        color: var(--amarelogema);
+      }
+      .divformulario{
+        background-color: var(--azulescurao);
+        padding-top: 20px;
+        margin: 20px auto;
+        display: block;
+        width: 95%;
+
+      }
+      .labelformulario{
+        margin-left: 1%;
+        box-sizing: border-box;
+        display: inline-flex;
+        width: 98%;
+        font-size: 20px;
+      }
+      .inputformulario{
+        margin-left: 1%;
+        box-sizing: border-box;
+        font-size: 20px;
+        font-style: italic;
+        color: var(--quasepreto);
+        display: inline-flex;
+        width: 98%;
+        padding-left: 10px;
+        min-height: 5vh;
+        min-width: 100px;
+      }
+      .btsubmit{
+        width: 98%;
+        margin: 1%;
+        box-sizing: border-box;
+        display: block;
+        justify-content: center;
+        text-align: center;
+      }
+      .enviado_com_sucesso, .erro_no_envio{
+        display: none;
+      }
+      .inputformulario:focus{
+        background: rgb(209, 252, 216);
+      }
+      .btenviar{
+        font-size: 1.2em;
+        background: var(--amarelogema);
+        color: var(--azulescurao);
+        border: 0;        
+        padding: 0.2em 0.6em;
+        box-shadow: 2px 2px 2px tomato;
+        
+      }
+      .btenviar:hover{
+        background: tomato;
+      }
+      #descricaoupload{
+        margin: 1%;
+        box-sizing: border-box;
+        padding: 10px;
+        padding-top: 2px;
+        text-align: justify;
+       
+    }
+    html, body {
+        height:100%;
+        width: 100%;
+        overflow-x: hidden;
+      }
+      footer {
+        position: relative end;
+        width: 100%;
+        padding-right: 30px;
+      
+      }
+      #cnpj {
+        padding-right: 30px;
+
+      }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/img/logoAEALcores2.png" id="titulo" alt="Associação Espírita André Luiz" ></a>
+        <nav id="menudesk">
+          <ul>
+            <li><a>Sobre</a>
+              <ul id="submenu">
+                <li><a href="diretoria.html">Diretoria</a></li>
+                <li><a href="editais.html">Editais</a></li>
+                <li><a href="estatuto.html">Estatuto</a></li>
+                <li><a href="historico.html">Histórico</a></li>
+                <li><a href="transparencia.html">Transparência</a></li>                      
+              </ul>
+            </li>
+            <li><a href="nananene.html">Nana Nenê</a></li>
+            <li><a href="livraria.html">Livraria</a></li>
+            <li><a href="apoio.html">Grupo de apoio</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
+            
+            
+          </ul>
+        </nav>
+        
+          <input type="checkbox" name="checkboxmenu" id="btmenu" class="btmenu">
+          <label for="btmenu" id="botao">&#9776;</label>
+          <!--<h3><a>MENU</a></h3>-->
+
+        <nav id="menuitens" class="menuitens">
+          <ul>
+            <li><a href="diretoria.html">Diretoria</a></li>
+            <li><a href="editais.html">Editais</a></li>
+            <li><a href="estatuto.html">Estatuto</a></li>
+            <li><a href="historico.html">Histórico</a></li>
+            <li><a href="transparencia.html">Transparência</a></li>
+            <li><a href="nananene.html">Nana Nenê</a></li>
+            <li><a href="livraria.html">Livraria</a></li>
+            <li><a href="apoio.html">Grupo de apoio</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
+          </ul>
+
+        </nav>
+        
+        
+      </header>
+      <div id="fundoheader"></div>
+      <section id="primeira">
+        <h1>TRABALHE CONOSCO</h1>
+        <p>Preencha o formulário para se candidatar as próximas oportunidades de trabalho em nossa instituição.</p>
+      </section>
+      <article id="matriculacorpo">
+          <h1 class="cand">CANDIDATO</h1>
+          <h2 class="fichacadastral">Ficha de interesse em vaga</h2>
+          <div class="divformulario">
+            <form method="POST" class="form_matricula" action="" name="formulariocand">
+              
+              <div class="grupoformulario">
+                <label for="nome_cand" class="labelformulario">Nome</label>
+                <input type="text" placeholder="Insira o seu nome" id="nome_cand" name="nome_cand" class="inputformulario" required>
+              </div>
+              <div class="grupoformulario">
+                <label for="endereco_cand" class="labelformulario">Endereço</label>
+                <input type="text" placeholder="Insira seu endereço" id="endereco_cand" name="endereco_cand" class="inputformulario" required>
+              </div>
+              <div class="grupoformulario">
+                <label for="telefone_cand" class="labelformulario">Telefone</label>
+                <input type="tel" placeholder="Insira seu telefone (ex: 18987654321)" id="telefone_cand" name="telefone_cand" class="inputformulario" required>
+              </div>
+              <div class="grupoformulario">
+                <label for="nascimento_cand" class="labelformulario">Data de nascimento</label>
+                <input type="date" id="nascimento_cand" name="nascimento_cand" class="inputformulario" required="">
+              </div>
+              <div class="grupoformulario">
+                <label for="email_cand" class="labelformulario">Endereço de email</label>
+                <input type="email" placeholder="Insira um endereço de email válido" id="email_cand" name="email_cand" class="inputformulario" required>
+              </div>
+              <div class="grupoformulario">
+                <label for="rg_cand" class="labelformulario">RG</label>
+                <input type="text" placeholder="Insira seu rg" id="rg_cand" name="rg_cand" class="inputformulario">
+              </div>
+              <div class="grupoformulario">
+                <label for="cpf_cand" class="labelformulario">CPF</label>
+                <input type="text" id="cpf_cand" name="cpf_cand" class="inputformulario" placeholder="Insira o nome da mãe">
+              </div>
+              <div class="grupoformulario">
+                <label for="cargo_cand" class="labelformulario">Cargo pretendido</label>
+                <input type="text" placeholder="Qual o cargo tem interesse em ocupar?" id="cargo_cand" name="cargo_cand" class="inputformulario">
+              </div>
+              <div class="grupoformulario">
+                <label for="salario_cand" class="labelformulario">Renumeração desejada</label>
+                <input type="text" placeholder="Qual a remuneração almejada?" id="salario_cand" name="salario_cand" class="inputformulario">
+              </div>
+              <div class="grupoformulario">
+                <label for="curriculo_cand" class="labelformulario">Curriculo</label>
+                <textarea id="curriculo_cand" name="curriculo_cand" class="inputformulario" rows="10">Por favor descreva seu perfil profissional e suas últimas experiências de trabalho.</textarea>
+                <p id="descricaoupload">Este formulário será utilizado para futuras triagens em oportunidades de contratações que vierem a surgir. Caso seu perfil seja selecionado para alguma dessas vagas, nossa equipe entrará em contato para agendar um entrevista e nesse momento será solicitado o currículo completo impresso.</p>
+              </div>
+              <div class="grupoformulario btsubmit">
+                <input type="submit" class="btenviar">
+              </div>
+              <div class="enviado_com_sucesso">
+                <p>Obrigado! Seu cadastro foi enviado, nossa equipe entrará em contato para agendar uma entrevista de admissão.</p>
+              </div>
+              <div class="erro_no_envio">
+                <p>Não foi possível enviar a seu cadastr. Por favor, corrija os erros e tente novamente.</p>
+              </div>
+              <input type="hidden" value="" name="recaptchaResponse">
+            </form>
+          </div>
+
+      </article>
+      <aside>
+       
+      </aside>
+      <div id="precontato">
+        <h1>Desde <wbr> 1952</h1>
+      </div>
+      <section id="contato">
+        <h2>Contato:</h2>
+        <p><span class="enfase">Telefone:</span> <a href="tel:+551837221203">(18) 3722-1203</a></p>
+        <p><span class="enfase">E-mail:</span> <a href="mailto:aealcrechenananene@gmail.com">aealcreche<wbr>nananene<wbr>@gmail.com</a></p>
+        <p><span class="enfase">Endereço:</span> <a href="https://www.google.com/maps/place/R.+Rio+de+Janeiro,+1+-+Vila+Passarelli,+Andradina+-+SP,+16900-080/@-20.9084412,-51.3782461,15z/data=!4m5!3m4!1s0x9490ca9583f2dc93:0x3bf1fc87da22f05e!8m2!3d-20.909243!4d-51.368397">Rua Rio de Janeiro, nº 1.478 - Centro - ANDRADINA/SP</a></p>
+      </section>
+      <footer>
+        <div><a  href="#" id="cadeado"><img src="assets/img/cadeado.png" alt="Central administrativo da página." width="25"></a></div>
+        <div id="cnpj">
+          <p>ASSOCIAÇÃO ESPÍRITA ANDRÉ LUIZ - AEAL<br>
+          CNPJ nº 43.542.687 / 0001-08 - RCPJ. nº 29, EM 27/10/52 - CNAS nº 44006.002267 / 95-82 <br>
+          Declaração de Utilidade Pública: Decreto Estadual nº 9.535 / 77 - Lei Municipal nº 987/83    <br>
+          Mantenedora da Creche Nana Nenê, Clube de Mães e Departamento Feminino</p>
+        </div>
+        <div id="logosredes"><a href="https://www.instagram.com/crechebercarionananene/"><img src="assets/img/logofacebook.png" alt="Facebook" width="50"></a><a href="https://m.facebook.com/profile.php?id=100028222447923"><img src="assets/img/logoinstagram.png" alt="Instagram" width="50"></a></div>
+      </footer>
+</body>
+</html>

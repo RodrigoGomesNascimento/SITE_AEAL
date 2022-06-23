@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatuto AEAL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@400;700&family=Monoton&family=Poiret+One&family=Righteous&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --azulclarinho : #1F7AB6;
+        --azulescurao : #206fa3;
+        --amarelogema : #F5D611;
+        --quasepreto : #202328;
+      }
+      body{
+        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-rows: 100px 0.5fr 10fr 0.4fr 0.4fr;
+      }
+      /*LINHA 5/6*/
+      #contato{
+        grid-column: 1/3;
+        grid-row: 4/5;
+      }
+      /*BARRA LATERAL*/
+      aside{
+        grid-column: 3/4;
+        grid-row: 3/4;
+      }
+      #precontato{
+        grid-column: 3/4;
+        grid-row: 4/5;
+      }
+      /*FOOTER*/
+      footer{
+        grid-column: 1/4;
+        /*grid-row: 5/6;*/
+      }
+        /*HISTÓRICO*/
+      #historicocorpo{
+        color: white;
+        padding: 20px;
+        background-color: var(--azulclarinho);
+        grid-row:3/4;
+        grid-column: 1/3;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        justify-content: space-around;
+        text-align: justify;
+        font-size: 15px;
+      }
+      #historicocorpo ul{
+        margin-left: 20px;
+        list-style-type: none;
+      }
+      #historicocorpo ol{
+        margin-left: 35px;
+       
+      }
+      /*RESPOSIVIDADE LINHAS INDEX*/
+      @media (max-width: 1192px){
+        body{
+          margin: 0;
+          padding: 0;
+          font-family: 'Roboto', sans-serif;
+          background: var(--azulescurao);
+          color: white;
+          display: grid;
+          grid-template-columns: 1fr 1fr 0.5fr;
+          grid-template-rows: 100px 0.2fr 10fr 0.4fr 0.4fr;
+          width: 100%;
+        }
+      }
+      @media (max-width: 555px){
+        body{
+          margin: 0;
+          padding: 0;
+          font-family: 'Roboto', sans-serif;
+          background: var(--azulescurao);
+          color: white;
+          display: grid;
+          grid-template-columns: 1fr 1fr 0.5fr;
+          grid-template-rows: 100px 0.15fr 10fr 0.4fr 0.4fr;
+          width: 100%;
+        }
+      }
+      html, body {
+        height:100%;
+        width: 100%;
+        overflow-x: hidden;
+      }
+      footer {
+        position: relative end;
+        width: 100%;
+        padding-right: 30px;
+      
+      }
+      #cnpj {
+        padding-right: 30px;
+
+      }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/img/logoAEALcores2.png" id="titulo" alt="Associação Espírita André Luiz" ></a>
+        <nav id="menudesk">
+          <ul>
+            <li><a>Sobre</a>
+              <ul id="submenu">
+                <li><a href="diretoria.html">Diretoria</a></li>
+                <li><a href="editais.html">Editais</a></li>
+                <li><a href="estatuto.html">Estatuto</a></li>
+                <li><a href="historico.html">Histórico</a></li>
+                <li><a href="transparencia.html">Transparência</a></li>                      
+              </ul>
+            </li>
+            <li><a href="nananene.html">Nana Nenê</a></li>
+            <li><a href="livraria.html">Livraria</a></li>
+            <li><a href="apoio.html">Grupo de apoio</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
+            
+            
+          </ul>
+        </nav>
+        
+          <input type="checkbox" name="checkboxmenu" id="btmenu" class="btmenu">
+          <label for="btmenu" id="botao">&#9776;</label>
+          <!--<h3><a>MENU</a></h3>-->
+
+        <nav id="menuitens" class="menuitens">
+          <ul>
+            <li><a href="diretoria.html">Diretoria</a></li>
+            <li><a href="editais.html">Editais</a></li>
+            <li><a href="estatuto.html">Estatuto</a></li>
+            <li><a href="historico.html">Histórico</a></li>
+            <li><a href="transparencia.html">Transparência</a></li>
+            <li><a href="nananene.html">Nana Nenê</a></li>
+            <li><a href="livraria.html">Livraria</a></li>
+            <li><a href="apoio.html">Grupo de apoio</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
+          </ul>
+
+        </nav>
+        
+        
+      </header>
+      <div id="fundoheader"></div>
+      <section id="primeira">
+        <h1>ESTATUTO SOCIAL</h1>
+        <p>Associação Espírita André Luiz </p>
+      </section>
+      <article id="historicocorpo">
+        <h2>CAPÍTULO I - DA DENOMINAÇÃO, SEDE E FINS</h2>
+        <p><strong>Artigo 1º) </strong>- A "ASSOCIAÇÃO ESPÍRITA ANDRÉ LUIZ", doravante designada por "AEAL", fundada em 04 de abril de 1952, registrada sob nº 29, às folhas 27, do Livro "A", em 27/10/1952, no Registro das Pessoas Jurídicas da Comarca de Andradina – SP., é uma entidade civil não econômica, de natureza assistencial, beneficente e filantrópica, que  será regida pelas disposições do presente Estatuto.</p>
+
+        <p><strong>Artigo 2º)</strong> - A "AEAL" funcionará por tempo indeterminado, tendo sede e foro neste município e comarca de Andradina, Estado de São Paulo, instalada à Rua Rio de Janeiro nº 1478, Centro, CEP 16900-027.</p>
+        
+        <p><strong>Artigo 3º)</strong> - São fins da "AEAL":</p>
+        <ul>
+        <li>a) - manter, conforme os recursos de que dispuser: Creches, Clube de Mães, Centros Comunitários e obras afins;</li>
+        <li>b) - promover a educação, a defesa da saúde e o amparo social;</li>
+        <li>c) - promover a arrecadação de gêneros alimentícios, vestuário, calçados e medicamentos para a distribuição gratuita adequada;</li>
+        <li>d) - organizar e explorar estabelecimentos industriais, comerciais, agrícolas ou de prestação de serviços, objetivando a promoção de seus assistidos e cujas rendas sejam totalmente revertidas em favor de suas obras e de seus fins;</li>
+        </ul>
+        <p><strong>Parágrafo Único</strong> – Todo atendimento e assistência prestados pela  "AEAL" serão inteiramente gratuitos e voltados especialmente aos segmentos carentes da população.</p>
+        
+        <p><strong>Artigo 4º)</strong> - É terminantemente proibida nas ações, atividades, dependências e operações da "AEAL":</p>
+        <ul>
+        <li>a) - a distinção de raça, cor, condição social, credo político e religioso;</li>
+        <li>b) - toda e qualquer manifestação de caráter político partidário ou que contrariem os postulados que regem ou devam nortear suas ações.</li>
+        </ul>
+        
+        <h2>CAPÍTULO II - DOS MEIOS E FORMAS DE AÇÃO</h2>
+        
+        
+        <h3>S e ç ã o  I - Dos Recursos Econômicos</h3>
+        
+        
+        <p><strong>Artigo 5º)</strong> - Os recursos para manutenção da "AEAL" provirão:</p>
+        <ul>
+          <li>a) - das contribuições voluntárias de particulares;</li>
+          <li>b) - dos auxílios e subvenções dos poderes públicos e de outras entidades;</li>
+          <li>c) - de doações e legados de qualquer natureza;</li>
+          <li>d) - do resultado da prestação de serviços e da venda de produtos;</li>
+          <li>e) - do resultado de promoções beneficentes e atividades afins;</li>
+          <li>f) – da retribuição por convênios e parcerias;</li>
+        </ul>
+        <p><strong>Parágrafo Único</strong> – A “AEAL” aplicará integralmente suas rendas, recursos e eventual resultado operacional na manutenção dos objetivos institucionais no território nacional.</p>
+          
+        
+        <h3>S e ç ã o   II - Do Patrimônio Social</h3>
+        
+        <p><strong>Artigo 6º)</strong> - O patrimônio da "AEAL" é constituído por bens móveis e imóveis, direitos e obrigações registrados contabilmente em sua escrituração.</p>
+        
+        <p><strong>Artigo 7º)</strong> - Todos os bens móveis e imóveis da "AEAL" só poderão ser alienados ou onerados em casos excepcionais e com a devida aprovação da Assembléia Geral;</p>
+        
+        <p><strong>Artigo 8º)</strong> - Na hipótese de dissolução da "AEAL", pagas todas as obrigações, o patrimônio líquido remanescente será destinado a outra entidade congênere, com personalidade jurídica, sede e atividades preponderantes no Estado de São Paulo e que seja registrada no Conselho Nacional de Assistência Social – CNAS.</p>
+        
+        <p><strong>Artigo 9º)</strong> – A “AEAL” não poderá, sob nenhuma forma ou pretexto, distribuir resultados, dividendos, bonificações, participações ou parcelas de seu patrimônio.</p>
+          
+        <h3>S e ç ã o  III - Dos Associados</h3>
+        
+        <p><strong>Artigo 10)</strong> - A "AEAL" admitirá Associados sem distinção de sexo, nacionalidade, raça, cor, convicção política ou religiosa, respeitados, entretanto, estes estatutos e a legislação do país.</p>
+        <p><strong>Parágrafo Único</strong> – Associados são as pessoas que contribuem, mensal ou anualmente, em moeda, ou em valor que nela se possa expressar, na quantia fixada pela Assembléia Geral ou acima dela e, também, as pessoas que concorrerem para a manutenção, da “AEAL” ou de suas obras, com doações em espécie ou que, voluntariamente, lhe prestem serviços indispensáveis.</p>
+        
+        <p><strong>Artigo 11)</strong>  – O quadro de Associados será controlado pela Diretoria e mantido pelos Departamentos Financeiro e Assistencial, com registros próprios que lhe assegurem a exatidão, segurança e fácil identificação dos atuantes para atendimento do disposto nos §§ 1º e 2º do Art. 10 e § 1º do Art. 24 deste Estatuto.</p>
+        
+        <p><strong>Artigo 12)</strong>  - Os Associados poderão ser suspensos ou excluídos dos quadros da “AEAL”, a pedido ou por ato fundamentado dos Diretores de Departamentos quando:</p>
+        <ul>
+        <li>a)	– praticarem qualquer ato atentatório à moral  ou aos bons costumes;</li>
+        <li>b)	– deixarem de prestar a sua contribuição ou colaboração à “AEAL”.</li>
+        </ul>
+        <p><strong>Parágrafo Único</strong> – A suspensão ou a exclusão de Associado só admissível havendo justa causa, assegurado o direito de ampla defesa e de recurso à Assembléia Geral, obedecido ao disposto neste Estatuto e na legislação própria.</p>
+        
+        <p><strong>Artigo 13)</strong> – Observado o disposto no § 1º do Art. 24, são direitos e deveres dos Associados:</p>
+        <ul>
+          <li>a)	– tomar parte nas Assembléias e atividades da “AEAL”;</li>
+          <li>b)	– votar, ser votado e cumprir decisões dos órgãos estatutários da “AEAL”;</li>
+          <li>c)	– convocar a Assembléia Geral, observado o parágrafo único do artigo 23;</li>
+          <li>d)	– dar contribuição e/ou  prestar colaboração voluntária à “AEAL”;</li>
+          <li>e)	– agir com diligência no desempenho dos encargos que lhe forem confiados e com lealdade para com todos.</li>
+        </ul>
+
+        <h3>S e ç ã o IV - Do Pessoal</h3>
+        
+        <p><strong>Artigo 14)</strong> - A "AEAL" contratará, com observância da legislação própria, por prazo certo ou indeterminado, todo o pessoal técnico e auxiliar necessário aos seus serviços.</p>
+        
+        <h2>CAPÍTULO III - DA ADMINISTRAÇÃO</h2>
+        
+        
+        <h3>S e ç ã o   I  -  Da Diretoria</h3>
+        
+        <p><strong>Artigo 15)</strong> - A administração da "AEAL" caberá a uma Diretoria, eleita pela Assembléia Geral, com mandato de três anos, permitida a reeleição, composta de Presidente,  Vice-Presidente, Diretores e Vice-Diretores de Departamentos.</p>
+        
+        <p><strong>Artigo 16)</strong> - São Departamentos da "AEAL":</p>
+        <ol>
+          <li>Departamento de Administração, abrangendo secretaria, escrituração contábil, recursos humanos, obras e manutenção de edifícios;</li>
+          <li>Departamento Financeiro;</li>
+          <li>Departamento de Obras Assistenciais;</li>
+          <li>Departamento Cultural;  </li>
+          <li>Departamento de Infância e Juventude.</li>
+        </ol>
+          
+        <p><strong>Parágrafo 1º)</strong> - Cada Departamento terá um Diretor e um Vice-Diretor que o auxiliará nas suas tarefas e o substituirá em suas faltas e impedimentos.</p>
+        
+        <p><strong>Parágrafo 2º)</strong> - Cada Departamento terá suas atribuições reguladas em regimento e elaborará seu plano de trabalho, submetendo-o à aprovação dos demais Diretores.</p>
+        
+        <p><strong>Parágrafo 3º)</strong> –  O Departamento Assistencial abrange a Creche, o Clube de Mães e o Grupo de Apoio a Carentes, que terão Coordenadores próprios;</p>
+        
+        <p><strong>Parágrafo 4º)</strong> – As novas obras e manutenção de edifícios competirão ao Vice-Diretor de Administração;</p>
+        
+        <p><strong>Parágrafo 5º)</strong> – Anualmente a Diretoria elaborará o relatório das atividades desenvolvidas e o plano de trabalho para o período seguinte.</p>
+        
+        <p><strong>Artigo 17)</strong> - Nenhum Conselheiro, Diretor, Associado, Colaborador, Instituidor, Benfeitor ou equivalente perceberá remuneração, vantagens ou benefícios, direta ou indiretamente, por qualquer forma ou título, em razão das competências, cargos, funções e atividades exercidas ou que lhes sejam atribuídas por força deste estatuto, sendo inteiramente gratuitos todos os serviços assim prestados.</p>
+        <p><strong>Artigo 18)</strong> - O Presidente da Diretoria da "AEAL" exercerá também a Presidência da Assembléia Geral, quando outro não for por ela escolhido, e, como quaisquer outros Diretores e Conselheiros, poderá ser destituído nos termos da alínea “h”, do Artigo 25 deste Estatuto.</p>
+        
+        <p><strong>Artigo 19)</strong>  - Compete ao Presidente:</p>
+        <ul>
+          <li>a) - representar a "AEAL" ativa e passivamente, judicial e extra-judicialmente;</li>
+          <li>b) - obrigar a "AEAL", assinando com o Diretor do Departamento Financeiro, em operações normais, cheques, contratos, títulos de crédito, de natureza comercial e semelhantes;</li>
+          <li>c) - outorgar procurações em nome da "AEAL", com poderes restritos e específicos;</li>
+          <li>d) - admitir e demitir empregados, ouvidos os demais Diretores;</li>
+          <li>e) - nomear auxiliares diretos;</li>
+          <li>f) - apresentar à Assembléia Geral orçamentos, plano anual de trabalho, bem como relatórios, balanços e demonstração de contas de período findo, acompanhados de parecer do Conselho Fiscal;</li>
+          <li>g) - exercer todos os outros atos de gestão e executar as decisões da Assembléia Geral.</li>
+        </ul>
+        <p><strong>Artigo 20)</strong> - Compete ao Vice-Presidente auxiliar o Presidente e substitui-lo em suas faltas e impedimentos.</p>
+        
+        <h3>S e ç ã o  II – Do Conselho Fiscal</h3>
+        
+        <p><strong>Artigo 21)</strong>  - O Conselho Fiscal (CF) será integrado por 3 (três) Membros Efetivos e 3 (três) Suplentes, integrantes ou não dos quadros de Associados, eleitos pela Assembléia Geral juntamente com a Diretoria, para mandato de 3 (três) anos, permitida a reeleição.</p>
+        
+        <p><strong>Artigo 22)</strong>  - São funções do Conselho Fiscal:</p>
+        <ul>
+        <li>a) - emitir parecer sobre os Relatórios, Balanços e Contas da AEAL.</li>
+        <li>b) - fiscalizar, permanentemente, toda a escrituração  da "AEAL";</li>
+        <li>c) - notificar o Presidente da "AEAL" sobre quaisquer irregularidades observadas na gestão ou escrituração, convocando, se necessário, a Assembléia Geral para expor os fatos constatados.</li>
+        </ul>
+        <h3>Seção III – Da Assembléia Geral</h3>
+        
+        <p><strong>Artigo 23)</strong> - A Assembléia Geral é o órgão supremo da "AEAL" cabendo-lhe deliberar livremente, observando as disposições deste Estatuto e a legislação vigente no país.</p>
+        
+        <p><strong>Parágrafo Único</strong> – A Assembléia Geral decidirá por maioria simples e sua Convocação será feita por publicação e outros meios usuais, com antecedência mínima de 5 (cinco) dias, individualmente pelo Presidente; fundamentadamente pela maioria dos Diretores, pela maioria dos Conselheiros Fiscais ou ainda por 1/5 (um quinto) dos associados  com direito a voto.</p>
+        
+        <p><strong>Artigo 24)</strong> - A Assembléia Geral será constituída por número ilimitado de membros;</p>
+        
+        <p><strong>Parágrafo 1º)</strong> – São Membros natos da Assembléia Geral todos os Associados, desde que regularmente filiados há mais de 18 (dezoito) meses;</p>
+        
+        <p><strong>Parágrafo 2º)</strong> – Os demais Associados poderão se fazer presentes às Assembléias, mas sem direito a votar, contudo poderão ser votados para o Conselho Fiscal e cargos da Diretoria, exceto para Presidente e Vice-Presidente;</p>
+        
+        <p><strong>Parágrafo 3º)</strong> – As Assembléias decidirão sobre a oitiva, pareceres e relatórios de quaisquer pessoas com vistas a subsidiar decisões sobre assuntos da sua competência.</p>
+          
+        <p><strong>Artigo 25)</strong>  - Compete a Assembléia Geral:</p>
+        <ul>
+          <li>a) - eleger os Membros da Diretoria e do Conselho Fiscal;</li>
+          <li>b) - permitir a alienação ou oneração dos bens móveis e imóveis da "AEAL";</li>
+          <li>f)	- decidir sobre novas obras, instalações e ampliação de serviços;</li>
+          <li>g)	– examinar relatórios, balanços, demonstrações e contas da Diretoria;</li>
+          <li>e) - aprovar planos de ação, de trabalho e orçamentos;</li>
+          <li>f) - interpretar e alterar o presente estatuto;</li>
+          <li>g) - decidir sobre a dissolução da "AEAL" e a destinação de seus bens;</li>
+          <li>h) – decidir sobre o afastamento ou destituição de Diretores e Conselheiros;</li>
+          <li>i) – decidir recursos sobre a suspensão ou exclusão de associados;</li>
+          <li>j) – decidir em outras situações em que seja exigida ou se recomende a sua manifestação.</li>
+        </ul>
+        <p><strong>Artigo 26)</strong>  - A Assembléia Geral se reunirá ordinariamente no mês de Janeiro de cada ano para examinar contas, relatórios e programas de atividades e extraordinariamente sempre que convocada.</p>
+        
+        <p><strong>Parágrafo 1º)</strong> – Ressalvadas as exceções legais e casos em que seja exigido quorum especial ou qualificado, a Assembléia Geral se reunirá em Primeira Convocação à hora aprazada com a presença de 2/3 (dois terços) de seus membros natos e, em Segunda Convocação, trinta minutos após, com qualquer número de membros presentes;</p>
+        
+        <p><strong>Parágrafo 2º)</strong>  - As decisões da Assembléia Geral, exceto as especiais previstas neste Estatuto, serão tomadas pela maioria dos presentes, observado o disposto no parágrafo 2º, do artigo 24 deste Estatuto;</p>
+          
+        <p><strong>Parágrafo 3º)</strong>  - Os registros das presenças dos membros da Assembléia Geral e as Atas de suas Reuniões serão arquivados seqüencialmente, dispensada a transcrição manual;</p>
+        
+        <p><strong>Parágrafo 4º)</strong>  - Extraordinariamente a Assembléia Geral se reunirá para deliberar sobre as hipóteses previstas nas alíneas “a” a “c” e “f” a “j” do Artigo 24 deste Estatuto ou em qualquer outra situação que exija seu pronunciamento.</p>
+        
+        <p><strong>Parágrafo 5º)</strong> - Quaisquer operações e documentos que impliquem obrigações de valor superior a cinquenta (50) salários mínimos serão antecipadamente submetidos ao Conselho Fiscal, mas no caso de veto ou de recomendação contrária, facultar-se-á à Diretoria submeter o assunto à apreciação da Assembléia Geral.</p>
+        <p><strong>Parágrafo 6º)</strong> - A reunião da Assembléia Geral convocada para deliberar sobre a alienação ou oneração de bem móvel ou direito da "AEAL", de valor superior a cinqüenta (50) salários mínimos ou de qualquer bem imóvel só poderá ser instalada com a presença mínima de 2/3 (dois terços) dos seus membros natos.</p>
+          
+        <p><strong>Parágrafo 7º)</strong> - A reunião da Assembléia Geral convocada para deliberar sobre a dissolução da "AEAL" só se instalará com a presença mínima de, pelo menos, 3/4 (três quartos) dos seus Associados.</p>
+        
+        
+        <h2>CAPÍTULO IV - DISPOSIÇÕES GERAIS E TRANSITÓRIAS</h2>
+        
+        
+        <p><strong>Artigo 27)</strong> - É terminantemente vedado ao Presidente, Diretores, Conselheiros e Associados empregarem o nome da "AEAL" em fins estranhos aos seus objetivos.</p>
+        
+        <p><strong>Artigo 28)</strong> - Os Associados ou mantenedores não respondem, nem mesmo subsidiariamente, pelos encargos da "AEAL", mas esta responderá civilmente pelos atos de seus agentes que nessa qualidade causarem danos a terceiros, ressalvado o direito de regresso no caso de culpa ou dolo dos causadores do dano.</p>
+          
+        <p><strong>Artigo 29)</strong> - Em caso de dissolução da "AEAL", a liquidação será procedida por Comissão Especial eleita, empossada e compromissada pela Assembléia que decidir a extinção.</p>
+        
+        <p><strong>Artigo 30)</strong> – Atendidas as demais condições, aos atuais Associados não se aplica o prazo estabelecido no Parágrafo primeiro, do Artigo 24 deste Estatuto.</p>
+        
+        <p><strong>Artigo 31)</strong> - Este Estatuto poderá ser reformado a qualquer tempo pela Assembléia Geral, observado o disposto no § 2º do Artigo 26.</p>
+        
+        <p><strong>Artigo 32)</strong> - Os casos omissos serão resolvidos na forma da legislação vigente e este Estatuto, aprovado em Reunião Extraordinária do extinto Conselho Deliberativo da “AEAL”, realizada em 07 de Setembro de 2004 e alterado pela Assembléia Geral dos Associados, em 29/01/2007, entrará em vigor imediatamente após a sua averbação junto ao registro oficial.</p>
+        
+        <p>Andradina SP, 29 de janeiro de 2007.</p>
+      </article>
+      <aside>
+       
+      </aside>
+      <div id="precontato">
+        <h1>Desde <wbr> 1952</h1>
+      </div>
+      <section id="contato">
+        <h2>Contato:</h2>
+        <p><span class="enfase">Telefone:</span> <a href="tel:+551837221203">(18) 3722-1203</a></p>
+        <p><span class="enfase">E-mail:</span> <a href="mailto:aealcrechenananene@gmail.com">aealcreche<wbr>nananene<wbr>@gmail.com</a></p>
+        <p><span class="enfase">Endereço:</span> <a href="https://www.google.com/maps/place/R.+Rio+de+Janeiro,+1+-+Vila+Passarelli,+Andradina+-+SP,+16900-080/@-20.9084412,-51.3782461,15z/data=!4m5!3m4!1s0x9490ca9583f2dc93:0x3bf1fc87da22f05e!8m2!3d-20.909243!4d-51.368397">Rua Rio de Janeiro, nº 1.478 - Centro - ANDRADINA/SP</a></p>
+      </section>
+      <footer>
+        <div><a  href="#" id="cadeado"><img src="assets/img/cadeado.png" alt="Central administrativo da página." width="25"></a></div>
+        <div id="cnpj">
+          <p>ASSOCIAÇÃO ESPÍRITA ANDRÉ LUIZ - AEAL<br>
+          CNPJ nº 43.542.687 / 0001-08 - RCPJ. nº 29, EM 27/10/52 - CNAS nº 44006.002267 / 95-82 <br>
+          Declaração de Utilidade Pública: Decreto Estadual nº 9.535 / 77 - Lei Municipal nº 987/83    <br>
+          Mantenedora da Creche Nana Nenê, Clube de Mães e Departamento Feminino</p>
+        </div>
+        <div id="logosredes"><a href="https://www.instagram.com/crechebercarionananene/"><img src="assets/img/logofacebook.png" alt="Facebook" width="50"></a><a href="https://m.facebook.com/profile.php?id=100028222447923"><img src="assets/img/logoinstagram.png" alt="Instagram" width="50"></a></div>
+      </footer>
+</body>
+</html>

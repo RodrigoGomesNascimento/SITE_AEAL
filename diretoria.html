@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretoria</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@400;700&family=Monoton&family=Poiret+One&family=Righteous&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --azulclarinho : #1F7AB6;
+        --azulescurao : #206fa3;
+        --amarelogema : #F5D611;
+        --quasepreto : #202328;
+      }
+      body{
+        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-rows: 100px 0.3fr 8fr 4fr 0.4fr 0.4fr;
+      }
+      /*LINHA 3/4*/
+     
+      .secundaria{
+        padding: 5px;
+        padding-top: 30px;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 16vw;
+        min-width: 140px;
+        cursor: pointer;
+        transition: all .6s;
+        margin-bottom: 20px;
+    
+      }
+      .secundaria img{
+        max-width: 10vw;
+        min-width: 75px;
+      }
+      .secundaria:hover {
+        background-color: tomato;
+      }
+  
+      /*LINHA4/5*/
+      #segunda{
+        color:var(--amarelogema);
+        padding: 0.5rem;
+        background-color: tomato;
+        grid-row:3/5;
+        grid-column: 1/3;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        justify-content: space-around;
+        box-sizing: border-box;
+      }
+      a p, a h3{
+        color: white;
+        text-decoration: none;
+      }
+      a{
+        text-decoration: none;
+      }
+      #segunda a{
+        width: 99%;
+      }
+      .primariadiv{
+        display: flex;
+        box-sizing: border-box;
+        padding: 5px;
+        padding-top: 30px;
+        width: 48%;
+        min-width: 390px;
+        background-color: rgba(12, 48, 71, 0.2);
+        border-radius: 5px;
+        align-items: center;
+        text-align: left;
+        box-shadow: 5px 5px 10px rgba(12, 48, 71, 0.8);
+        cursor: pointer;
+        transition: all .6s;
+      }
+      .primariadiv img{
+        border-radius: 10px;
+        margin: 20px;
+        
+        height: auto;
+        box-shadow: #F5D611 2px 2px 2px;
+
+      }
+      .primariadiv:hover {
+        background-color: var(--azulescurao);
+      }
+      .primariadiv h3{
+        color: white;
+      }
+      
+      @media (max-width: 555px) {
+        .primariadiv{
+          min-width: 200px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+      }
+      .primariadiv img{
+        border-radius: 10px;
+        margin: 8px;
+      }
+      body{
+        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-rows: 100px 0.1fr 1fr 4fr 0.2fr 0.4fr;
+      }
+      }
+      /*LINHA 5/6*/
+      #contato{
+        grid-column: 1/3;
+        grid-row: 5/6;
+      }
+      /*BARRA LATERAL*/
+      aside{
+        grid-column: 3/4;
+        grid-row: 3/5;
+      }
+      #precontato{
+        grid-column: 3/4;
+        grid-row: 5/6;
+      }
+      /*FOOTER*/
+      footer{
+        grid-column: 1/4;
+        grid-row: 6/7;
+      }
+      html, body {
+        
+        width: 100%;
+        overflow-x: hidden;
+      }
+     
+    
+     
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/img/logoAEALcores2.png" id="titulo" alt="Associação Espírita André Luiz" ></a>
+        <nav id="menudesk">
+          <ul>
+            <li><a>Sobre</a>
+              <ul id="submenu">
+                <li><a href="diretoria.html">Diretoria</a></li>
+                <li><a href="editais.html">Editais</a></li>
+                <li><a href="estatuto.html">Estatuto</a></li>
+                <li><a href="historico.html">Histórico</a></li>
+                <li><a href="transparencia.html">Transparência</a></li>                      
+              </ul>
+            </li>
+            <li><a href="nananene.html">Nana Nenê</a></li>
+            <li><a href="livraria.html">Livraria</a></li>
+            <li><a href="apoio.html">Grupo de apoio</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
+            
+            
+          </ul>
+        </nav>
+        
+          <input type="checkbox" name="checkboxmenu" id="btmenu" class="btmenu">
+          <label for="btmenu" id="botao">&#9776;</label>
+          <!--<h3><a>MENU</a></h3>-->
+
+        <nav id="menuitens" class="menuitens">
+          <ul>
+            <li><a href="diretoria.html">Diretoria</a></li>
+            <li><a href="editais.html">Editais</a></li>
+            <li><a href="estatuto.html">Estatuto</a></li>
+            <li><a href="historico.html">Histórico</a></li>
+            <li><a href="transparencia.html">Transparência</a></li>
+            <li><a href="nananene.html">Nana Nenê</a></li>
+            <li><a href="livraria.html">Livraria</a></li>
+            <li><a href="apoio.html">Grupo de apoio</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
+          </ul>
+
+        </nav>
+        
+        
+    </header>
+      <div id="fundoheader"></div>
+      <section id="primeira">
+        <h1>Diretoria</h1>
+        <p> Conheça a equipe que faz com que possamos administrar todas as atividades de AEAL com exelência e harmonia.</p>
+        <p> Gestão de 06/09/2019 à 06/09/2022.</p>
+      </section>
+      <article id="segunda">
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/antoniopg.png"/>
+          <hgroup>
+          <h3>ANTONIO PAULO GERALDO</h3>
+          <h4>Presidente</h4>
+          <p> Cirurgião dentista e funcionário público, casado;</p>
+          <p>Contato: 18-98115-6254</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/valdemirfl.png"/>
+          <hgroup>
+          <h3>VALDEMIR FERREIRA DE LIMA</h3>
+          <h4>Vice-residente</h4>
+          <p>Professor, divorciado;</p>
+          <p>Contato: 18-99747-4463</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/edsondm.png"/>
+          <hgroup>
+          <h3>EDSON DOURADO MATOS</h3>
+          <h4>Secretário: (Diretor do Departamento de Administração)</h4>
+          <p>Contador, casado;</p>
+          <p>Contato: 1818-3702-4300</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/joseap.png"/>
+          <hgroup>
+          <h3>JOSÉ ANTÔNIO PIZZO</h3>
+          <h4>Vice-secretário: (Vice-diretor do Departamento de Administração)</h4>
+          <p>Engenheiro civil e empresário, casado;</p>
+          <p>Contato: 18-99796-3269</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/osmargm.png"/>
+          <hgroup>
+          <h3>OSMAR GARCIA MUNHOZ</h3>
+          <h4>Tesoureiro: (Diretor do Departamento Financeiro)</h4>
+          <p>Bancário aposentado e empresário, casado;</p>
+          <p>Contato: 18-99782-3253</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/edmirdmm.png"/>
+          <hgroup>
+          <h3>EDMIR DOURADO DE MATOS MUNHOZ</h3>
+          <h4>Vice-tesoureiro: (Vice-diretor do Departamento Financeiro)</h4>
+          <p>Aposentada e empresária, casada;</p>
+          <p>Contato: 18-99709-0680</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/neirems.png"/>
+          <hgroup>
+          <h3>NEIRE MASSUIA DE SOUZA</h3>
+          <h4>Diretor do Departamento Assistencial</h4>
+          <p>Aposentado, casado;</p>
+          <p>Contato: 18-98184-3282</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/reginacp.png"/>
+          <hgroup>
+          <h3>REGINA CELIA PAULINO</h3>
+          <h4>Vice-diretora do Departamento Assistencial</h4>
+          <p>Aposentada, divorciada;</p>
+          <p>Contato: 18-99782-6243</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/mariadcp.png"/>
+          <hgroup>
+          <h3>MARIA DENISE CASTELLAZZI PIZZO</h3>
+          <h4>Diretora do Departamento Cultural</h4>
+          <p>Professora, casada;</p>
+          <p>Contato: 18-98119-6416</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/semfoto.png"/>
+          <hgroup>
+          <h3>JANETE MICHEL HANNA WADA</h3>
+          <h4>Vice-diretora do Departamento Cultural</h4>
+          <p>Do lar, casada;</p>
+          <p>Contato: ...</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/semfoto.png"/>
+          <hgroup>
+          <h3>JORGE ADEL ANBAR</h3>
+          <h4>Assistente de Biblioteca</h4>
+          <p>Técnico em Informática, solteiro;</p>
+          <p>Contato: ...</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/leilacm.png"/>
+          <hgroup>
+          <h3>LEILA CASTELETTI MATOS</h3>
+          <h4>Diretora do Departamento de Infância e Juventude</h4>
+          <p>Professora aposentada, casada;</p>
+          <p>Contato: 18-98157-3650</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/selmams.png"/>
+          <hgroup>
+          <h3>SELMA MARIA SPEGIORIN</h3>
+          <h4>Vice-diretora do Departamento de Infância e Juventude</h4>
+          <p>Enfermeira, aposentada, casada;</p>
+          <p>Contato: 18-99781-8173</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/luizap.png"/>
+          <hgroup>
+          <h3>LUIZ ALBERTO PAGNANI</h3>
+          <h4>Conselheiro Fiscal - Efetivo</h4>
+          <p>Agrônomo e Empresário, casado;</p>
+          <p>Contato: 18-99726-8270</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/luizcm.png"/>
+          <hgroup>
+          <h3>LUIZ CARLOS MARQUES</h3>
+          <h4>Conselheiro Fiscal - Efetivo</h4>
+          <p>Produtor agropecuarista, casado;</p>
+          <p>Contato: 18-99152-5713</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/silviorsm.png"/>
+          <hgroup>
+          <h3>SILVIO ROBERTO DA SILVA MEDEIROS</h3>
+          <h4>Conselheiro Fiscal - Efetivo</h4>
+          <p>Empresário, casado;</p>
+          <p>Contato: 18-99144-6677</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/semfoto.png"/>
+          <hgroup>
+          <h3>LEANDRO SPEGIORIN MARQUES</h3>
+          <h4>Conselheiro Fiscal - Suplente</h4>
+          <p>Engenheiro Agrônomo, solteiro;</p>
+          <p>Contato: 18-99173-5005</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/luizcvm.png"/>
+          <hgroup>
+          <h3>LUIZ CARLOS VIEIRA MARQUES</h3>
+          <h4>Conselheiro Fiscal - Suplente</h4>
+          <p>Aposentado, casado;</p>
+          <p>Contato: 18-98126-9942</p>
+        </hgroup>
+        </div>
+        <div class="primariadiv">
+          <img src="assets/fotosequipe/valdirbi.png"/>
+          <hgroup>
+          <h3>VALDIR BORGES IPIRANGA</h3>
+          <h4>Conselheiro Fiscal - Suplente</h4>
+          <p>Industriário, divorciado;</p>
+          <p>Contato: 18-99812-7606</p>
+        </hgroup>
+        </div>
+
+          
+      </article>
+      <aside>
+        <!--<h3>Complementar</h3>
+        <p>Rs rsr sr srsrs sr rs rsrs srs rs rsrsrsrsr srrs srs rs sr srs srr rrs srs rs rs rs srs rs sr s</p> -->
+      </aside>
+      
+      <div id="precontato">
+        <h1>Desde <wbr> 1952</h1>
+      </div>
+      <section id="contato">
+        <h2>Contato:</h2>
+        <p><span class="enfase">Telefone:</span> <a href="tel:+551837221203">(18) 3722-1203</a></p>
+        <p><span class="enfase">E-mail:</span> <a href="mailto:aealcrechenananene@gmail.com">aealcreche<wbr>nananene<wbr>@gmail.com</a></p>
+        <p><span class="enfase">Endereço:</span> <a href="https://www.google.com/maps/place/R.+Rio+de+Janeiro,+1+-+Vila+Passarelli,+Andradina+-+SP,+16900-080/@-20.9084412,-51.3782461,15z/data=!4m5!3m4!1s0x9490ca9583f2dc93:0x3bf1fc87da22f05e!8m2!3d-20.909243!4d-51.368397">Rua Rio de Janeiro, nº 1.478 - Centro - ANDRADINA/SP</a></p>
+      </section>
+      <footer>
+        <div><a  href="#" id="cadeado"><img src="assets/img/cadeado.png" alt="Central administrativo da página." width="25"></a></div>
+        <div id="cnpj">
+          <p>ASSOCIAÇÃO ESPÍRITA ANDRÉ LUIZ - AEAL<br>
+          CNPJ nº 43.542.687 / 0001-08 - RCPJ. nº 29, EM 27/10/52 - CNAS nº 44006.002267 / 95-82 <br>
+          Declaração de Utilidade Pública: Decreto Estadual nº 9.535 / 77 - Lei Municipal nº 987/83    <br>
+          Mantenedora da Creche Nana Nenê, Clube de Mães e Departamento Feminino</p>
+        </div>
+        <div id="logosredes"><a href="https://www.instagram.com/crechebercarionananene/"><img src="assets/img/logofacebook.png" alt="Facebook" width="50"></a><a href="https://m.facebook.com/profile.php?id=100028222447923"><img src="assets/img/logoinstagram.png" alt="Instagram" width="50"></a></div>
+      </footer>
+    
+</body>
+</html>
