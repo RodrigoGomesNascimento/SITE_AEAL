@@ -1,293 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraria AEAL</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@400;700&family=Monoton&family=Poiret+One&family=Righteous&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <style>
-      :root{
-        --azulclarinho : #1F7AB6;
-        --azulescurao : #206fa3;
-        --amarelogema : #F5D611;
-        --quasepreto : #202328;
-      }
-      body{
-        grid-template-columns: 1fr 1fr 0.5fr;
-        grid-template-rows: 100px 0.5fr 1fr 0.2fr 0.4fr 20px;
-      }
-      /*LINHA 3/4*/
-      #terceira{
-        padding: 0.5rem;
-        background-color: var(--azulclarinho);
-        background-image: linear-gradient(to bottom, var(--azulclarinho), tomato);
-        grid-column: 1/3;
-        grid-row:3/4;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-      }
-      .secundaria{
-        padding: 5px;
-        padding-top: 30px;
-        border-radius: 10px;
-        text-align: center;
-        max-width: 16vw;
-        min-width: 140px;
-        cursor: pointer;
-        transition: all .6s;
-        margin-bottom: 20px;
-    
-      }
-      .secundaria img{
-        max-width: 10vw;
-        min-width: 75px;
-      }
-      .secundaria:hover {
-        background-color: tomato;
-      }
-  
-      /*LINHA4/5*/
-      #segunda{
-        color:var(--amarelogema);
-        padding: 0.5rem;
-        background-color: tomato;
-        grid-row:4/5;
-        grid-column: 1/3;
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 15px;
-        justify-content: space-around;
-      }
-      #segunda div p{
-        color: white;
-      }
-      .primariadiv{
-        padding: 5px;
-        padding-top: 30px;
-        width: auto;
-        max-width: 24vw;
-        min-width: 195px;
-        background-color: rgba(12, 48, 71, 0.2);
-        border-radius: 30px;
-        text-align: center;
-        box-shadow: 5px 5px 10px rgba(12, 48, 71, 0.8);
-        cursor: pointer;
-        transition: all .6s;
-        border-start-end-radius: 0px;
-      }
-      .primariadiv img{
-        max-width: 100px;
-      }
-      .primariadiv:hover {
-        background-color: var(--azulescurao);
-      }
-      @media (max-width: 275px) {
-        .primariadiv{
-          min-width: 150px;
-      }
-      }
-      /*LINHA 5/6*/
-      #contato{
-        grid-column: 1/3;
-        grid-row: 5/6;
-      }
-      /*BARRA LATERAL*/
-      aside{
-        grid-column: 3/4;
-        grid-row: 3/5;
-      }
-      #precontato{
-        grid-column: 3/4;
-        grid-row: 5/6;
-      }
-      /*FOOTER FUNDO*/
-      footer{
-        grid-column: 1/4;
-        /*grid-row: 6/7;*/
-      }
-      #livroindica{
-        padding-left: 30px;
-        width: 100%;
-        text-align: left;
-        margin-bottom: 15px;
-      }
-      #livrosgeral{
-        width: 95%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      #divcapalivro{
-        margin-right: 10%;
-        width: 40%;
-        display: block;
-        justify-content: center;
-      }
-      #descricaolivro{
-        display: block;
-        direction: column;
-        justify-content: space-around;
-        min-width: 197px;
-        max-width: 50%;
-      }
-      #titulolivro{
-        color: var(--amarelogema);
-        text-transform: uppercase;
-        margin-bottom: 10px;
-      }
-      #sinopselivro{
-        margin-right: 10px;
-        text-align: justify;
-        margin-bottom: 10px;
-      }
-      #valorlivro{
-        margin-bottom: 20px;
-      }
-      #autorlivro{
-        margin-bottom: 5px;
-      }
-      #comprawhatsapp{
-        width: 50px;
-      }
-      #logowhatsapp{
-        width: 100%;
-      }
-      #pelowhat{
-        width: 50%;
-        margin-right: 20px;
-        font-size: 1.2em;
-        text-align: end;
-      }
-      #pelowhat a{
-        text-decoration: none;
-        color: lawngreen;
-      }
-      @media (max-width: 570px){
-        #descricaolivro{
-          min-width: 98%;
-        }
-      }
-      html, body {
-        height:100%;
-        width: 100%;
-        overflow-x: hidden;
-      }
-      footer {
-        position: relative end;
-        width: 100%;
-        padding-right: 30px;
-      
-      }
-      #cnpj {
-        padding-right: 30px;
-
-      }
-
-
-
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria AEAL</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="css/bootstrap.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <a href="index.html"><img src="assets/img/logoAEALcores2.png" id="titulo" alt="Associação Espírita André Luiz" ></a>
-        <nav id="menudesk">
-          <ul>
-            <li><a>Sobre</a>
-              <ul id="submenu">
-                <li><a href="diretoria.html">Diretoria</a></li>
-                <li><a href="editais.html">Editais</a></li>
-                <li><a href="estatuto.html">Estatuto</a></li>
-                <li><a href="historico.html">Histórico</a></li>
-                <li><a href="transparencia.html">Transparência</a></li>                      
-              </ul>
-            </li>
-            <li><a href="nananene.html">Nana Nenê</a></li>
-            <li><a href="livraria.html">Livraria</a></li>
-            <li><a href="apoio.html">Grupo de apoio</a></li>
-            <li><a href="fotos.html">Fotos</a></li>
-            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
-            
-            
-          </ul>
-        </nav>
-        
-          <input type="checkbox" name="checkboxmenu" id="btmenu" class="btmenu">
-          <label for="btmenu" id="botao">&#9776;</label>
-          <!--<h3><a>MENU</a></h3>-->
+  <!-- Menu superior -->
+  <header>
+    <nav id="menudesk"
+      class="navbar navbar-dark bg-dark navbar-expand-lg navbar-expand-md navbar-expand-sm bg-image-preto">
+      <a href="index.html" class="navbar-brand"><img src="assets/img/logoAEALcores2.png" id="titulo" width="70"
+          alt="Associação Espírita André Luiz"></a>
+      <button type="button" class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
-        <nav id="menuitens" class="menuitens">
-          <ul>
-            <li><a href="diretoria.html">Diretoria</a></li>
-            <li><a href="editais.html">Editais</a></li>
-            <li><a href="estatuto.html">Estatuto</a></li>
-            <li><a href="historico.html">Histórico</a></li>
-            <li><a href="transparencia.html">Transparência</a></li>
-            <li><a href="nananene.html">Nana Nenê</a></li>
-            <li><a href="livraria.html">Livraria</a></li>
-            <li><a href="apoio.html">Grupo de apoio</a></li>
-            <li><a href="fotos.html">Fotos</a></li>
-            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
-          </ul>
+        <ul class="navbar-nav ">
+          <li class="dropdown nav-item ">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" href="#" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="nav-label">Sobre</span><span class="caret"></span></a>
+            <ul id="submenu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class=""><a href="diretoria.html" class="dropdown-item">Diretoria</a></li>
+              <li class=""><a href="editais.html" class="dropdown-item">Editais</a></li>
+              <li class=""><a href="estatuto.html" class="dropdown-item">Estatuto</a></li>
+              <li class=""><a href="historico.html" class="dropdown-item">Histórico</a></li>
+              <li class=""><a href="transparencia.html" class="dropdown-item">Transparência</a></li>
+            </ul>
+          </li>
+          <li class="nav-item "><a href="nananene.html" class="nav-link">Nana Nenê</a></li>
+          <li class="nav-item "><a href="livraria.html" class="nav-link">Livraria</a></li>
+          <li class="nav-item "><a href="apoio.html" class="nav-link">Grupo de apoio</a></li>
+          <li class="nav-item "><a href="fotos.html" class="nav-link">Fotos</a></li>
+          <li class="nav-item "><a href="dpfeminino.html" class="nav-link">Departamento Feminino</a></li>
 
-        </nav>
-        
-        
-      </header>
-      <div id="fundoheader"></div>
-      <section id="primeira">
-        <h1>LIVRARIA DA AEAL</h1>
-        <p> A livraria da Associação Espírita André Luiz possui em seu acervo diversos exemplares com temática espírita e toda a renda arrecadada com as vendas são revertidas para os projetos desenvolvidos pela AEAL.</p>
-      </section>
-      <article id="segunda">
-        <div id="pelowhat">
-        <h2>Compre pelo Whatsapp:</h2><br>
-        <p>Denise <a href="tel:+5518981196416">(18) 98119-6416</a></p>
+
+        </ul>
       </div>
-        <div id="comprawhatsapp">
-          <a href="tel:+5518981196416"><img src="assets/img/logowhatsapp.png" alt="" id="logowhatsapp"></a>
-        </div>
-      </article>
-      <aside>
-        <!--<h3>Complementar</h3>
-        <p>Rs rsr sr srsrs sr rs rsrs srs rs rsrsrsrsr srrs srs rs sr srs srr rrs srs rs rs rs srs rs sr s</p> -->
-      </aside>
-      <section id="terceira">
-        <h2 id="livroindica">Livro:</h2>
-        <div id="livrosgeral">
-          <div id="divcapalivro"><img src="assets/capas livros/capa0001.png" alt="Capa de Livro" id="capalivro" name="capalivro"></div>
-          <div id="descricaolivro">
-            <h2 id="titulolivro" name="titulolivro">Vida plena</h2>
-            <p id="sinopselivro" name="sinopselivro">A mentora espiritual Joanna de Ângelis, através da psicografia do médium Divaldo Franco, brinda-nos com um novo livro magnânimo, um convite à “Vida plena”, por meio de 30 enriquecedoras mensagens de diversos temas da atualidade, expostos à luz d’O Evangelho segundo o Espiritismo, a fim de auxiliar aquele que as ler a alcançar o bem viver, com o coração pulsante de alegria, para que seja ditoso no porvir.</p>
-            <h3 id="valorlivro" name="valorlivro">Valor: R$ 60,00</h3>
-            <h4 id="autorlivro" name="autor livro">Autor: Médium: Divaldo Pereira Franco / Ditado por: Joanna de Ângelis</h4>
-          </div>
-        </div>
-        
-      </section>
-      <div id="precontato">
-        <h1>Desde <wbr> 1952</h1>
+    </nav>
+  </header>
+  <!-- Título -->
+  <section id="primeira" class="bg-secondary bg-image-secondary">
+    <div class="container-xl ">
+      <h1 class="text-primary titulosublinhado">LIVRARIA DA AEAL</h1>
+      <p class="text-white " style="text-align: justify;">A livraria da Associação Espírita André Luiz possui em seu
+        acervo diversos exemplares com temática espírita e toda a renda arrecadada com as vendas são revertidas para os
+        projetos desenvolvidos pela AEAL.</p>
+      <div>
+  </section>
+  <article id="segunda">
+    <div id="pelowhat">
+      <h2>Compre pelo Whatsapp:</h2><br>
+      <p>Denise <a href="tel:+5518981196416">(18) 98119-6416</a></p>
+    </div>
+    <div id="comprawhatsapp">
+      <a href="tel:+5518981196416"><img src="assets/img/logowhatsapp.png" alt="" id="logowhatsapp"></a>
+    </div>
+  </article>
+  <section id="terceira">
+    <h2 id="livroindica">Livro:</h2>
+    <div id="livrosgeral">
+      <div id="divcapalivro"><img src="assets/capas livros/capa0001.png" alt="Capa de Livro" id="capalivro"
+          name="capalivro"></div>
+      <div id="descricaolivro">
+        <h2 id="titulolivro" name="titulolivro">Vida plena</h2>
+        <p id="sinopselivro" name="sinopselivro">A mentora espiritual Joanna de Ângelis, através da psicografia do
+          médium Divaldo Franco, brinda-nos com um novo livro magnânimo, um convite à “Vida plena”, por meio de 30
+          enriquecedoras mensagens de diversos temas da atualidade, expostos à luz d’O Evangelho segundo o Espiritismo,
+          a fim de auxiliar aquele que as ler a alcançar o bem viver, com o coração pulsante de alegria, para que seja
+          ditoso no porvir.</p>
+        <h3 id="valorlivro" name="valorlivro">Valor: R$ 60,00</h3>
+        <h4 id="autorlivro" name="autor livro">Autor: Médium: Divaldo Pereira Franco / Ditado por: Joanna de Ângelis
+        </h4>
       </div>
-      <section id="contato">
-        <h2>Contato:</h2>
-        <p><span class="enfase">Telefone:</span> <a href="tel:+551837221203">(18) 3722-1203</a></p>
-        <p><span class="enfase">E-mail:</span> <a href="mailto:aealcrechenananene@gmail.com">aealcreche<wbr>nananene<wbr>@gmail.com</a></p>
-        <p><span class="enfase">Endereço:</span> <a href="https://www.google.com/maps/place/R.+Rio+de+Janeiro,+1+-+Vila+Passarelli,+Andradina+-+SP,+16900-080/@-20.9084412,-51.3782461,15z/data=!4m5!3m4!1s0x9490ca9583f2dc93:0x3bf1fc87da22f05e!8m2!3d-20.909243!4d-51.368397">Rua Rio de Janeiro, nº 1.478 - Centro - ANDRADINA/SP</a></p>
-      </section>
-      <div id="fundofooter"></div>
-      <footer>
-        <div><a  href="#" id="cadeado"><img src="assets/img/cadeado.png" alt="Central administrativo da página." width="25"></a></div>
-        <div id="cnpj">
-          <p>ASSOCIAÇÃO ESPÍRITA ANDRÉ LUIZ - AEAL<br>
-          CNPJ nº 43.542.687 / 0001-08 - RCPJ. nº 29, EM 27/10/52 - CNAS nº 44006.002267 / 95-82 <br>
-          Declaração de Utilidade Pública: Decreto Estadual nº 9.535 / 77 - Lei Municipal nº 987/83    <br>
-          Mantenedora da Creche Nana Nenê, Clube de Mães e Departamento Feminino</p>
-        </div>
-        <div id="logosredes"><a href="https://www.instagram.com/crechebercarionananene/"><img src="assets/img/logofacebook.png" alt="Facebook" width="50"></a><a href="https://m.facebook.com/profile.php?id=100028222447923"><img src="assets/img/logoinstagram.png" alt="Instagram" width="50"></a></div>
-      </footer>
-    
+    </div>
+
+  </section>
+  <!-- Final -->
+  <section id="contato" class="bg-secondary text-primary">
+    <h2 class="titulosublinhado">Contato:</h2>
+    <div class="paragfinal">
+      <div class="row">
+        <div class="col"><span class="contatos container-sm"><span class="enfase">Telefone:</span> <a
+              href="tel:+551837221203">(18) 3722-1203</a></span></div>
+        <div class="col"><span class="contatos container-sm"><span class="enfase">E-mail:</span> <a
+              href="mailto:aealcrechenananene@gmail.com">aealcrechenananene<wbr>@gmail.com</a></span></div>
+
+        <div class="col"><span class="contatos container-sm"><span class="enfase">Endereço:</span> <a
+              href="https://www.google.com/maps/place/R.+Rio+de+Janeiro,+1+-+Vila+Passarelli,+Andradina+-+SP,+16900-080/@-20.9084412,-51.3782461,15z/data=!4m5!3m4!1s0x9490ca9583f2dc93:0x3bf1fc87da22f05e!8m2!3d-20.909243!4d-51.368397">Rua
+              Rio de Janeiro, nº 1.478 - <wbr>Centro - ANDRADINA/SP</a></span></div>
+      </div>
+    </div>
+
+  </section>
+  <div id="desde1952" class="bg-success text-light">
+    <h5 class="">Desde <wbr> 1952</h5>
+  </div>
+  <footer class="bg-image-preto bg-dark text-primary">
+    <div><a href="#" id="cadeado"><img src="assets/img/cadeado.png" alt="Central administrativo da página."
+          width="25"></a></div>
+    <div id="cnpj">
+      <address class="small">ASSOCIAÇÃO ESPÍRITA ANDRÉ LUIZ - AEAL<br>
+        CNPJ nº 43.542.687 / 0001-08 - RCPJ. nº 29, EM 27/10/52 - CNAS nº 44006.002267 / 95-82 <br>
+        Declaração de Utilidade Pública: Decreto Estadual nº 9.535 / 77 - Lei Municipal nº 987/83<br>
+        Mantenedora da Creche Nana Nenê, Clube de Mães e Departamento Feminino</address>
+    </div>
+    <div id="logosredes"><a href="https://www.instagram.com/crechebercarionananene/"><img
+          src="assets/img/logofacebook.png" alt="Facebook" width="50"></a><a
+        href="https://m.facebook.com/profile.php?id=100028222447923"><img src="assets/img/logoinstagram.png"
+          alt="Instagram" width="50"></a></div>
+  </footer>
+  <!-- Javascrit -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

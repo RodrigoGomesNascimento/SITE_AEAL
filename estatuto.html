@@ -5,158 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estatuto AEAL</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@400;700&family=Monoton&family=Poiret+One&family=Righteous&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <style>
-      :root{
-        --azulclarinho : #1F7AB6;
-        --azulescurao : #206fa3;
-        --amarelogema : #F5D611;
-        --quasepreto : #202328;
-      }
-      body{
-        grid-template-columns: 1fr 1fr 0.5fr;
-        grid-template-rows: 100px 0.5fr 10fr 0.4fr 0.4fr;
-      }
-      /*LINHA 5/6*/
-      #contato{
-        grid-column: 1/3;
-        grid-row: 4/5;
-      }
-      /*BARRA LATERAL*/
-      aside{
-        grid-column: 3/4;
-        grid-row: 3/4;
-      }
-      #precontato{
-        grid-column: 3/4;
-        grid-row: 4/5;
-      }
-      /*FOOTER*/
-      footer{
-        grid-column: 1/4;
-        /*grid-row: 5/6;*/
-      }
-        /*HISTÓRICO*/
-      #historicocorpo{
-        color: white;
-        padding: 20px;
-        background-color: var(--azulclarinho);
-        grid-row:3/4;
-        grid-column: 1/3;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        row-gap: 15px;
-        justify-content: space-around;
-        text-align: justify;
-        font-size: 15px;
-      }
-      #historicocorpo ul{
-        margin-left: 20px;
-        list-style-type: none;
-      }
-      #historicocorpo ol{
-        margin-left: 35px;
-       
-      }
-      /*RESPOSIVIDADE LINHAS INDEX*/
-      @media (max-width: 1192px){
-        body{
-          margin: 0;
-          padding: 0;
-          font-family: 'Roboto', sans-serif;
-          background: var(--azulescurao);
-          color: white;
-          display: grid;
-          grid-template-columns: 1fr 1fr 0.5fr;
-          grid-template-rows: 100px 0.2fr 10fr 0.4fr 0.4fr;
-          width: 100%;
-        }
-      }
-      @media (max-width: 555px){
-        body{
-          margin: 0;
-          padding: 0;
-          font-family: 'Roboto', sans-serif;
-          background: var(--azulescurao);
-          color: white;
-          display: grid;
-          grid-template-columns: 1fr 1fr 0.5fr;
-          grid-template-rows: 100px 0.15fr 10fr 0.4fr 0.4fr;
-          width: 100%;
-        }
-      }
-      html, body {
-        height:100%;
-        width: 100%;
-        overflow-x: hidden;
-      }
-      footer {
-        position: relative end;
-        width: 100%;
-        padding-right: 30px;
-      
-      }
-      #cnpj {
-        padding-right: 30px;
-
-      }
-
-    </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="css/bootstrap.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <a href="index.html"><img src="assets/img/logoAEALcores2.png" id="titulo" alt="Associação Espírita André Luiz" ></a>
-        <nav id="menudesk">
-          <ul>
-            <li><a>Sobre</a>
-              <ul id="submenu">
-                <li><a href="diretoria.html">Diretoria</a></li>
-                <li><a href="editais.html">Editais</a></li>
-                <li><a href="estatuto.html">Estatuto</a></li>
-                <li><a href="historico.html">Histórico</a></li>
-                <li><a href="transparencia.html">Transparência</a></li>                      
-              </ul>
-            </li>
-            <li><a href="nananene.html">Nana Nenê</a></li>
-            <li><a href="livraria.html">Livraria</a></li>
-            <li><a href="apoio.html">Grupo de apoio</a></li>
-            <li><a href="fotos.html">Fotos</a></li>
-            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
-            
-            
-          </ul>
-        </nav>
-        
-          <input type="checkbox" name="checkboxmenu" id="btmenu" class="btmenu">
-          <label for="btmenu" id="botao">&#9776;</label>
-          <!--<h3><a>MENU</a></h3>-->
+  <!-- Menu superior -->
+  <header>
+    <nav id="menudesk"
+      class="navbar navbar-dark bg-dark navbar-expand-lg navbar-expand-md navbar-expand-sm bg-image-preto">
+      <a href="index.html" class="navbar-brand"><img src="assets/img/logoAEALcores2.png" id="titulo" width="70"
+          alt="Associação Espírita André Luiz"></a>
+      <button type="button" class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
-        <nav id="menuitens" class="menuitens">
-          <ul>
-            <li><a href="diretoria.html">Diretoria</a></li>
-            <li><a href="editais.html">Editais</a></li>
-            <li><a href="estatuto.html">Estatuto</a></li>
-            <li><a href="historico.html">Histórico</a></li>
-            <li><a href="transparencia.html">Transparência</a></li>
-            <li><a href="nananene.html">Nana Nenê</a></li>
-            <li><a href="livraria.html">Livraria</a></li>
-            <li><a href="apoio.html">Grupo de apoio</a></li>
-            <li><a href="fotos.html">Fotos</a></li>
-            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
-          </ul>
+        <ul class="navbar-nav ">
+          <li class="dropdown nav-item ">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" href="#" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="nav-label">Sobre</span><span class="caret"></span></a>
+            <ul id="submenu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class=""><a href="diretoria.html" class="dropdown-item">Diretoria</a></li>
+              <li class=""><a href="editais.html" class="dropdown-item">Editais</a></li>
+              <li class=""><a href="estatuto.html" class="dropdown-item">Estatuto</a></li>
+              <li class=""><a href="historico.html" class="dropdown-item">Histórico</a></li>
+              <li class=""><a href="transparencia.html" class="dropdown-item">Transparência</a></li>
+            </ul>
+          </li>
+          <li class="nav-item "><a href="nananene.html" class="nav-link">Nana Nenê</a></li>
+          <li class="nav-item "><a href="livraria.html" class="nav-link">Livraria</a></li>
+          <li class="nav-item "><a href="apoio.html" class="nav-link">Grupo de apoio</a></li>
+          <li class="nav-item "><a href="fotos.html" class="nav-link">Fotos</a></li>
+          <li class="nav-item "><a href="dpfeminino.html" class="nav-link">Departamento Feminino</a></li>
 
-        </nav>
-        
-        
-      </header>
-      <div id="fundoheader"></div>
-      <section id="primeira">
-        <h1>ESTATUTO SOCIAL</h1>
-        <p>Associação Espírita André Luiz </p>
-      </section>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Título -->
+  <section id="primeira" class="bg-secondary bg-image-secondary">
+    <div class="container-xl ">
+      <h1 class="text-primary titulosublinhado">ESTATUTO SOCIAL</h1>
+      <p class="text-white " style="text-align: justify;">Associação Espírita André Luiz</p>
+      <div>
+  </section>
+
       <article id="historicocorpo">
         <h2>CAPÍTULO I - DA DENOMINAÇÃO, SEDE E FINS</h2>
         <p><strong>Artigo 1º) </strong>- A "ASSOCIAÇÃO ESPÍRITA ANDRÉ LUIZ", doravante designada por "AEAL", fundada em 04 de abril de 1952, registrada sob nº 29, às folhas 27, do Livro "A", em 27/10/1952, no Registro das Pessoas Jurídicas da Comarca de Andradina – SP., é uma entidade civil não econômica, de natureza assistencial, beneficente e filantrópica, que  será regida pelas disposições do presente Estatuto.</p>
@@ -344,27 +243,45 @@
         
         <p>Andradina SP, 29 de janeiro de 2007.</p>
       </article>
-      <aside>
-       
-      </aside>
-      <div id="precontato">
-        <h1>Desde <wbr> 1952</h1>
+  <!-- Final -->
+  <section id="contato" class="bg-secondary text-primary">
+    <h2 class="titulosublinhado">Contato:</h2>
+    <div class="paragfinal">
+      <div class="row">
+        <div class="col"><span class="contatos container-sm"><span class="enfase">Telefone:</span> <a
+              href="tel:+551837221203">(18) 3722-1203</a></span></div>
+        <div class="col"><span class="contatos container-sm"><span class="enfase">E-mail:</span> <a
+            href="mailto:aealcrechenananene@gmail.com">aealcrechenananene<wbr>@gmail.com</a></span></div>
+
+        <div class="col"><span class="contatos container-sm"><span class="enfase">Endereço:</span> <a
+              href="https://www.google.com/maps/place/R.+Rio+de+Janeiro,+1+-+Vila+Passarelli,+Andradina+-+SP,+16900-080/@-20.9084412,-51.3782461,15z/data=!4m5!3m4!1s0x9490ca9583f2dc93:0x3bf1fc87da22f05e!8m2!3d-20.909243!4d-51.368397">Rua
+              Rio de Janeiro, nº 1.478 - <wbr>Centro - ANDRADINA/SP</a></span></div>
       </div>
-      <section id="contato">
-        <h2>Contato:</h2>
-        <p><span class="enfase">Telefone:</span> <a href="tel:+551837221203">(18) 3722-1203</a></p>
-        <p><span class="enfase">E-mail:</span> <a href="mailto:aealcrechenananene@gmail.com">aealcreche<wbr>nananene<wbr>@gmail.com</a></p>
-        <p><span class="enfase">Endereço:</span> <a href="https://www.google.com/maps/place/R.+Rio+de+Janeiro,+1+-+Vila+Passarelli,+Andradina+-+SP,+16900-080/@-20.9084412,-51.3782461,15z/data=!4m5!3m4!1s0x9490ca9583f2dc93:0x3bf1fc87da22f05e!8m2!3d-20.909243!4d-51.368397">Rua Rio de Janeiro, nº 1.478 - Centro - ANDRADINA/SP</a></p>
-      </section>
-      <footer>
-        <div><a  href="#" id="cadeado"><img src="assets/img/cadeado.png" alt="Central administrativo da página." width="25"></a></div>
-        <div id="cnpj">
-          <p>ASSOCIAÇÃO ESPÍRITA ANDRÉ LUIZ - AEAL<br>
-          CNPJ nº 43.542.687 / 0001-08 - RCPJ. nº 29, EM 27/10/52 - CNAS nº 44006.002267 / 95-82 <br>
-          Declaração de Utilidade Pública: Decreto Estadual nº 9.535 / 77 - Lei Municipal nº 987/83    <br>
-          Mantenedora da Creche Nana Nenê, Clube de Mães e Departamento Feminino</p>
-        </div>
-        <div id="logosredes"><a href="https://www.instagram.com/crechebercarionananene/"><img src="assets/img/logofacebook.png" alt="Facebook" width="50"></a><a href="https://m.facebook.com/profile.php?id=100028222447923"><img src="assets/img/logoinstagram.png" alt="Instagram" width="50"></a></div>
-      </footer>
+    </div>
+
+  </section>
+  <div id="desde1952" class="bg-success text-light">
+    <h5 class="">Desde <wbr> 1952</h5>
+  </div>
+  <footer class="bg-image-preto bg-dark text-primary">
+    <div><a href="#" id="cadeado"><img src="assets/img/cadeado.png" alt="Central administrativo da página."
+          width="25"></a></div>
+    <div id="cnpj">
+      <address class="small">ASSOCIAÇÃO ESPÍRITA ANDRÉ LUIZ - AEAL<br>
+        CNPJ nº 43.542.687 / 0001-08 - RCPJ. nº 29, EM 27/10/52 - CNAS nº 44006.002267 / 95-82 <br>
+        Declaração de Utilidade Pública: Decreto Estadual nº 9.535 / 77 - Lei Municipal nº 987/83<br>
+        Mantenedora da Creche Nana Nenê, Clube de Mães e Departamento Feminino</address>
+    </div>
+    <div id="logosredes"><a href="https://www.instagram.com/crechebercarionananene/"><img
+          src="assets/img/logofacebook.png" alt="Facebook" width="50"></a><a
+        href="https://m.facebook.com/profile.php?id=100028222447923"><img src="assets/img/logoinstagram.png"
+          alt="Instagram" width="50"></a></div>
+  </footer>
+  <!-- Javascrit -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

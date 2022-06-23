@@ -1,230 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cheche e Berçário Nana Nenê</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@400;700&family=Monoton&family=Poiret+One&family=Righteous&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <style>
-      :root{
-        --azulclarinho : #1F7AB6;
-        --azulescurao : #206fa3;
-        --amarelogema : #F5D611;
-        --quasepreto : #202328;
-      }
-      body{
-        grid-template-columns: 1fr 1fr 0.5fr;
-        grid-template-rows: 100px 1fr 2fr 1fr 0.4fr 0.4fr;
-      }
-      /*LINHA 3/4*/
-      #terceira{
-        padding: 0.5rem;
-        background-color: var(--azulclarinho);
-        grid-column: 1/3;
-        grid-row:3/4;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-      }
-      
-  
-      /*LINHA4/5*/
-      #segunda{
-        color:var(--amarelogema);
-        padding: 0.5rem;
-        background-color: tomato;
-        grid-row:4/5;
-        grid-column: 1/3;
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 15px;
-        justify-content: space-around;
-      }
-      a p, a h3{
-        color: white;
-        text-decoration: none;
-      }
-      a{
-        text-decoration: none;
-      }
-      #terceira p{
-        margin: 0.5rem;
-        text-align: justify;
-      }
-      #segunda a{
-        width: 98%;
-      }
-      .primariadiv{
-        
-        padding-top: 30px;
-        padding-bottom: 30px;
-        width: 99%;
-        background-color: rgba(12, 48, 71, 0.2);
-        border-radius: 5px;
-        text-align: center;
-        box-shadow: 5px 5px 10px rgba(12, 48, 71, 0.8);
-        cursor: pointer;
-        transition: all .6s;
-      }
-      .primariadiv img{
-        max-width: 100px;
-      }
-      .primariadiv:hover {
-        background-color: var(--azulescurao);
-      }
-      
-      @media (max-width: 275px) {
-        .primariadiv{
-          min-width: 150px;
-      }
-      }
-      /*LINHA 5/6*/
-      #contato{
-        grid-column: 1/3;
-        grid-row: 5/6;
-      }
-      /*BARRA LATERAL*/
-      aside{
-        grid-column: 3/4;
-        grid-row: 3/5;
-      }
-      #precontato{
-        grid-column: 3/4;
-        grid-row: 5/6;
-      }
-      /*FOOTER*/
-      footer{
-        grid-column: 1/4;
-        /*grid-row: 6/7;*/
-      }
-      @media (max-width: 900px){
-        body{
-          grid-template-rows: 100px 0.7fr 2fr 1fr 0.4fr 0.4fr;
-        }
-      
-      }
-      @media (max-width: 576px){
-        body{
-          grid-template-rows: 100px 0.4fr 2fr 0.6fr 0.4fr 0.4fr;
-        }
-      
-      }
-      html, body {
-        height:100%;
-        width: 100%;
-        overflow-x: hidden;
-      }
-      footer {
-        position: relative end;
-        width: 100%;
-        padding-right: 30px;
-      
-      }
-      #cnpj {
-        padding-right: 30px;
-
-      }
-
-
-
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheche e Berçário Nana Nenê</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="css/bootstrap.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <a href="index.html"><img src="assets/img/logoAEALcores2.png" id="titulo" alt="Associação Espírita André Luiz" ></a>
-        <nav id="menudesk">
-          <ul>
-            <li><a>Sobre</a>
-              <ul id="submenu">
-                <li><a href="diretoria.html">Diretoria</a></li>
-                <li><a href="editais.html">Editais</a></li>
-                <li><a href="estatuto.html">Estatuto</a></li>
-                <li><a href="historico.html">Histórico</a></li>
-                <li><a href="transparencia.html">Transparência</a></li>                      
-              </ul>
-            </li>
-            <li><a href="nananene.html">Nana Nenê</a></li>
-            <li><a href="livraria.html">Livraria</a></li>
-            <li><a href="apoio.html">Grupo de apoio</a></li>
-            <li><a href="fotos.html">Fotos</a></li>
-            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
-            
-            
-          </ul>
-        </nav>
-        
-          <input type="checkbox" name="checkboxmenu" id="btmenu" class="btmenu">
-          <label for="btmenu" id="botao">&#9776;</label>
-          <!--<h3><a>MENU</a></h3>-->
+  <!-- Menu superior -->
+  <header>
+    <nav id="menudesk"
+      class="navbar navbar-dark bg-dark navbar-expand-lg navbar-expand-md navbar-expand-sm bg-image-preto">
+      <a href="index.html" class="navbar-brand"><img src="assets/img/logoAEALcores2.png" id="titulo" width="70"
+          alt="Associação Espírita André Luiz"></a>
+      <button type="button" class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
-        <nav id="menuitens" class="menuitens">
-          <ul>
-            <li><a href="diretoria.html">Diretoria</a></li>
-            <li><a href="editais.html">Editais</a></li>
-            <li><a href="estatuto.html">Estatuto</a></li>
-            <li><a href="historico.html">Histórico</a></li>
-            <li><a href="transparencia.html">Transparência</a></li>
-            <li><a href="nananene.html">Nana Nenê</a></li>
-            <li><a href="livraria.html">Livraria</a></li>
-            <li><a href="apoio.html">Grupo de apoio</a></li>
-            <li><a href="fotos.html">Fotos</a></li>
-            <li><a href="dpfeminino.html">Departamento Feminino</a></li>
-          </ul>
+        <ul class="navbar-nav ">
+          <li class="dropdown nav-item ">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" href="#" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="nav-label">Sobre</span><span class="caret"></span></a>
+            <ul id="submenu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class=""><a href="diretoria.html" class="dropdown-item">Diretoria</a></li>
+              <li class=""><a href="editais.html" class="dropdown-item">Editais</a></li>
+              <li class=""><a href="estatuto.html" class="dropdown-item">Estatuto</a></li>
+              <li class=""><a href="historico.html" class="dropdown-item">Histórico</a></li>
+              <li class=""><a href="transparencia.html" class="dropdown-item">Transparência</a></li>
+            </ul>
+          </li>
+          <li class="nav-item "><a href="nananene.html" class="nav-link">Nana Nenê</a></li>
+          <li class="nav-item "><a href="livraria.html" class="nav-link">Livraria</a></li>
+          <li class="nav-item "><a href="apoio.html" class="nav-link">Grupo de apoio</a></li>
+          <li class="nav-item "><a href="fotos.html" class="nav-link">Fotos</a></li>
+          <li class="nav-item "><a href="dpfeminino.html" class="nav-link">Departamento Feminino</a></li>
 
-        </nav>
-        
-        
-    </header>
-      <div id="fundoheader"></div>
-      <section id="primeira">
-        <h1>CRECHE E BERÇÁRIO NANA NENÊ</h1>
-        <p> Associação Espírita André Luiz</p>
-      </section>
-      <article id="segunda">
-        <a href="matriculas.html"><div class="primariadiv"><h3>MATRICULE SEU FILHO</h3>
-          <img src="assets/img/matriculas.png"/>
-          <p>Está precisando da Creche berçário Nana Nenê, agende aqui sua entrevista de admissão.</p>
-        </div></a>
-        
-          
-      </article>
-      <aside>
-        <!--<h3>Complementar</h3>
-        <p>Rs rsr sr srsrs sr rs rsrs srs rs rsrsrsrsr srrs srs rs sr srs srr rrs srs rs rs rs srs rs sr s</p> -->
-      </aside>
-      <section id="terceira">
 
-        <p>Assistência em regime de semi-internato às crianças filhos de mães carentes desde o nascimento até que possam ser atendidas pelas creches tradicionais. A CRECHE BERÇÁRIO NANA NENÊ, funcionando a partir de 07/11/1983, considerado um modelO estabelecimento nesse segmento.</p>
-        <p>A Creche funciona das <strong>7h às 17h</strong> ininterruptamente, de <strong>segunda à sexta-feira</strong>, em regime de semi-internato, período integral e tem capacidade para 50 (cinquenta) crianças na faixa de zero a três anos. Ocupa uma edificação com 400m2 de construção de boa qualidade.</p>
-        <p>A experiência no trato com recém-nascidos e seus familiares, as constantes inovações e mesmo as imposições de ordem legal sempre exigiram mais atividades para o adequado desenvolvimento das crianças e demandando aprimoramento constante.</p>
-        <p>Tendo em vista que a educação proporciona à criança o aprendizado e o conhecimento de valores culturais e morais, garantindo a evolução e a construção da cidadania, planejou-se, a partir de 1997, a implantação de Curso de Educação Infantil (maternal) para crianças maiores de 3 anos. Já em 1998 foi instalada junto a creche a classe de Ensino Infantil “Piu Piu”.</p>
-        <p>O exercício desse nível de ensino motivou a adoção de práticas, também de ensino, como a estimulação precoce, para as crianças de 0 a 2 anos, consideradas importantes ao desenvolvimento bio-psico-social.</p>
-        <p>A Creche conta com a atuação de professora especializada, com recursos pedagógicos adequados e, nesses últimos 4 anos, funcionou com até 20 alunos / ano.</p>
-      
-
-      </section>
-      <div id="precontato">
-        <h1>Desde <wbr> 1952</h1>
+        </ul>
       </div>
-      <section id="contato">
-        <h2>Contato:</h2>
-        <p><span class="enfase">Telefone:</span> <a href="tel:+551837221203">(18) 3722-1203</a></p>
-        <p><span class="enfase">E-mail:</span> <a href="mailto:aealcrechenananene@gmail.com">aealcreche<wbr>nananene<wbr>@gmail.com</a></p>
-        <p><span class="enfase">Endereço:</span> <a href="https://www.google.com/maps/place/R.+Rio+de+Janeiro,+1+-+Vila+Passarelli,+Andradina+-+SP,+16900-080/@-20.9084412,-51.3782461,15z/data=!4m5!3m4!1s0x9490ca9583f2dc93:0x3bf1fc87da22f05e!8m2!3d-20.909243!4d-51.368397">Rua Rio de Janeiro, nº 1.478 - Centro - ANDRADINA/SP</a></p>
-      </section>
-      <footer>
-        <div><a  href="#" id="cadeado"><img src="assets/img/cadeado.png" alt="Central administrativo da página." width="25"></a></div>
-        <div id="cnpj">
-          <p>ASSOCIAÇÃO ESPÍRITA ANDRÉ LUIZ - AEAL<br>
-          CNPJ nº 43.542.687 / 0001-08 - RCPJ. nº 29, EM 27/10/52 - CNAS nº 44006.002267 / 95-82 <br>
-          Declaração de Utilidade Pública: Decreto Estadual nº 9.535 / 77 - Lei Municipal nº 987/83    <br>
-          Mantenedora da Creche Nana Nenê, Clube de Mães e Departamento Feminino</p>
+    </nav>
+  </header>
+  <!-- Título -->
+  <section id="primeira" class="bg-secondary bg-image-secondary">
+    <div class="container-xl ">
+      <h1 class="text-primary titulosublinhado">CRECHE E BERÇÁRIO NANA NENÊ</h1>
+      <p class="text-white " style="text-align: justify;">Associação Espírita André Luiz</p>
+      <div>
+  </section>
+  <!-- Corrosel -->
+  <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+    </ol>
+    <div class="carousel-inner">
+      <article class="carousel-item active" data-interval="8000">
+        <div class="overlay-image" style="background-image: url(assets/img/matriculas.png);"></div>
+        <div class="container">
+          <h3>MATRICULE SEU FILHO</h3>
+          <p>Está precisando da Creche berçário Nana Nenê, agende aqui sua entrevista de admissão.</p>
+          <a href="#" class="btn btn-lg btn-primary">Lista de espera</a>
         </div>
-        <div id="logosredes"><a href="https://www.instagram.com/crechebercarionananene/"><img src="assets/img/logofacebook.png" alt="Facebook" width="50"></a><a href="https://m.facebook.com/profile.php?id=100028222447923"><img src="assets/img/logoinstagram.png" alt="Instagram" width="50"></a></div>
-      </footer>
-    
+      </article>
+    </div>
+  </div>
+  <section id="terceira">
+
+    <p>Assistência em regime de semi-internato às crianças filhos de mães carentes desde o nascimento até que possam ser
+      atendidas pelas creches tradicionais. A CRECHE BERÇÁRIO NANA NENÊ, funcionando a partir de 07/11/1983, considerado
+      um modelO estabelecimento nesse segmento.</p>
+    <p>A Creche funciona das <strong>7h às 17h</strong> ininterruptamente, de <strong>segunda à sexta-feira</strong>, em
+      regime de semi-internato, período integral e tem capacidade para 50 (cinquenta) crianças na faixa de zero a três
+      anos. Ocupa uma edificação com 400m2 de construção de boa qualidade.</p>
+    <p>A experiência no trato com recém-nascidos e seus familiares, as constantes inovações e mesmo as imposições de
+      ordem legal sempre exigiram mais atividades para o adequado desenvolvimento das crianças e demandando
+      aprimoramento constante.</p>
+    <p>Tendo em vista que a educação proporciona à criança o aprendizado e o conhecimento de valores culturais e morais,
+      garantindo a evolução e a construção da cidadania, planejou-se, a partir de 1997, a implantação de Curso de
+      Educação Infantil (maternal) para crianças maiores de 3 anos. Já em 1998 foi instalada junto a creche a classe de
+      Ensino Infantil “Piu Piu”.</p>
+    <p>O exercício desse nível de ensino motivou a adoção de práticas, também de ensino, como a estimulação precoce,
+      para as crianças de 0 a 2 anos, consideradas importantes ao desenvolvimento bio-psico-social.</p>
+    <p>A Creche conta com a atuação de professora especializada, com recursos pedagógicos adequados e, nesses últimos 4
+      anos, funcionou com até 20 alunos / ano.</p>
+
+
+  </section>
+  <!-- Final -->
+  <section id="contato" class="bg-secondary text-primary">
+    <h2 class="titulosublinhado">Contato:</h2>
+    <div class="paragfinal">
+      <div class="row">
+        <div class="col"><span class="contatos container-sm"><span class="enfase">Telefone:</span> <a
+              href="tel:+551837221203">(18) 3722-1203</a></span></div>
+        <div class="col"><span class="contatos container-sm"><span class="enfase">E-mail:</span> <a
+            href="mailto:aealcrechenananene@gmail.com">aealcrechenananene<wbr>@gmail.com</a></span></div>
+
+        <div class="col"><span class="contatos container-sm"><span class="enfase">Endereço:</span> <a
+              href="https://www.google.com/maps/place/R.+Rio+de+Janeiro,+1+-+Vila+Passarelli,+Andradina+-+SP,+16900-080/@-20.9084412,-51.3782461,15z/data=!4m5!3m4!1s0x9490ca9583f2dc93:0x3bf1fc87da22f05e!8m2!3d-20.909243!4d-51.368397">Rua
+              Rio de Janeiro, nº 1.478 - <wbr>Centro - ANDRADINA/SP</a></span></div>
+      </div>
+    </div>
+
+  </section>
+  <div id="desde1952" class="bg-success text-light">
+    <h5 class="">Desde <wbr> 1952</h5>
+  </div>
+  <footer class="bg-image-preto bg-dark text-primary">
+    <div><a href="#" id="cadeado"><img src="assets/img/cadeado.png" alt="Central administrativo da página."
+          width="25"></a></div>
+    <div id="cnpj">
+      <address class="small">ASSOCIAÇÃO ESPÍRITA ANDRÉ LUIZ - AEAL<br>
+        CNPJ nº 43.542.687 / 0001-08 - RCPJ. nº 29, EM 27/10/52 - CNAS nº 44006.002267 / 95-82 <br>
+        Declaração de Utilidade Pública: Decreto Estadual nº 9.535 / 77 - Lei Municipal nº 987/83<br>
+        Mantenedora da Creche Nana Nenê, Clube de Mães e Departamento Feminino</address>
+    </div>
+    <div id="logosredes"><a href="https://www.instagram.com/crechebercarionananene/"><img
+          src="assets/img/logofacebook.png" alt="Facebook" width="50"></a><a
+        href="https://m.facebook.com/profile.php?id=100028222447923"><img src="assets/img/logoinstagram.png"
+          alt="Instagram" width="50"></a></div>
+  </footer>
+  <!-- Javascrit -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

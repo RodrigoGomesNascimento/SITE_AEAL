@@ -1,295 +1,131 @@
-:root{
-  --azulclarinho : #1F7AB6;
-  --azulescurao : #206fa3;
-  --amarelogema : #F5D611;
-  --quasepreto : #202328;
+@charset "UTF-";
+
+.bg-image-preto{
+	background-image: url(../assets/img/fundopreto.svg);
+	background-repeat: repeat;
+	background-size: 0.5vw;
+	background-position: right;
 }
-*{
-  margin: 0;
-  padding: 0;
+.bg-image-secondary{
+	background-image: url(../assets/img/fundosecondary.svg);
+	background-repeat: repeat;
+	background-size: 0.4vw;
+	background-position: right;
 }
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background: var(--azulescurao);
-    color: white;
-    display: grid;
-    
-    width: 100%;
-  
-  }
-  #fundoheader{
-    background-image: url("../assets/img/fundoamarelo.png");
-    background-repeat: repeat;
-    background-size: contain;
-    background-color: #F5D611;
-    grid-column: 1/4;
-    grid-row: 1/2;
-  }
-
-  /*CABEÇALHO*/
-  header{
-    background-image: url("../assets/img/fundopreto.png");
-    background-repeat: repeat;
-    background-size: contain;
-    background-position: right;
-    position: fixed;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--quasepreto);
-    grid-column: 1/4;
-    grid-row: 1/2;
-  }
-  #titulo{
-    width: 90px;
-    margin-left: 2vw;
-    margin-top: 3vh;
-  }
-  #titulo:hover {
-    background-color: var(--quasepreto);
-    transition: all .6s;
-  }
-  nav{
-    width: 70vw;
-    margin: 0;
-    margin-bottom: 0;
-    height: auto;
-    display: inline-flex;
-    justify-content: space-between;
-  }
-  nav ul{
-    font-size: 20px;
-    font-family: 'Bebas Neue', cursive;
-    list-style-type: none;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    transition: all .6s;
-  }
-  nav ul li{
-    color: var(--amarelogema);
-    display: block;
-    min-width: 100px;
-    min-height: 30px;
-    padding: 5px;
-    margin: 0;
-    margin-bottom: 0;
-    height: auto;
-  }
-  nav ul li a{
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: var(--amarelogema);   
-  }
-  #menudesk{
-    justify-content: right;
-    margin-right: 10px;
-    margin-bottom: 0;
-    height: auto;
-  }
-  nav ul li:hover {
-    background-color: var(--azulescurao);
-    transition: background .3s;
-  }
-
-  /*SUBMENU*/
-  nav ul ul{
-    background-color: rgba(255, 255, 255, 0);
-    display: none;
-    position: absolute;
-    margin-left: -5px;
-    margin-top: 5px;
-    width: 120px;
-  }
-  nav ul ul li{
-    margin: 0;
-  }
-  nav ul ul li a{
-    text-align: left;
-    color: white;
-  }
-  nav ul li:hover ul{
-      display: block;
-      background-color: var(--azulescurao);
-      transition: background .8s; 
-  }
-
-  /*MENU MOBILE*/
-  #menuitens ul{
-    display: none;
-    position: absolute;
-    right: -100%;
-    margin-top: 0;
-    width: 120px;
-    transition: all .4s;
-  }
-  #menuitens ul li{
-    background-color: var(--azulclarinho);
-  } 
-  #menuitens ul li a{
-    text-align: left;
-    color: white;
-  }
-  #botao{
-    margin-left: 50px;
-    display: none;
-  }
-  #btmenu{
-    display: none;
-  }
-  label[for="btmenu"]{
-    padding: 10px;
-    padding-top: 20px;
-    background-color: var(--azulescurao);
-    border-start-start-radius: 10px;
-    color: var(--quasepreto);
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-size: 30px;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    margin-right: 0;
-   }
-
-  /*RESPONSIVIDADE MENU*/
-  @media (max-width: 555px){
-    #menudesk{
-      display: none;
-    } 
-    #botao{
-      display: block;
-    }
-    #btmenu:checked ~ #menuitens ul{
-      right: 0%;
-      display: block;
-      transition: all .4s;
-    }   
-  }
-
-  /*LINHA 2/3*/
-  #primeira{
-    font-family: 'Comfortaa', cursive;
-    font-size: large;
-    color: var(--azulescurao);
-    padding: 1rem;
-    background-color: var(--amarelogema);
-    grid-column: 1/4;
-    grid-row: 2/3;
-    text-align: flex;
-  }
-  #primeira h1{
-    font-size: 5vw;
-    font-family: 'Roboto', sans-serif;
-  }
-  @media (max-width: 900px){
-    #primeira h1{
-      font-size: 40px;
-    }
-  }
-  
-  
-
-  /*LINHA 5/6*/
-  #contato{
-    color: var(--amarelogema);
-    margin-top: 0;
-    padding: 1rem;
-    
-    text-align: left;
-  }
-  #contato>h2{
-    font-family: 'Comfortaa', cursive;
-  }
-  .enfase{    
-    font-size: 17px;
-    width: 100px;
-    text-decoration-line: underline;
-  }
-  #contato p{
-    display: block;
-    align-items: flex-start;
-    margin: 4px;
-  }
-  #contato p a{
-    flex-wrap: wrap;
-    text-decoration: none;
-    color: white;
-    margin-left: 4vw;
-  }
-
-  /*BARRA LATERAL*/
-  aside{
-    padding: 0.5rem;
-    /*background-color: red;*/
-    background-image: url("../assets/img/logoAEALcores.png");
-    background-repeat: repeat-y;
-    background-size: contain;
-    background-position: right top;
-    
-  }
-  #precontato{
-    background-color: tomato;
-    font-family: 'Monoton', cursive;
-    padding: 10px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  #precontato:hover {
-    background-color: var(--amarelogema);
-  }
-  #precontato h1{
-    font-size: auto;
-    text-align: center;
-  }
-  @media (max-width: 430px){
-    #precontato{
-      writing-mode: vertical-lr;
-    }
-  }
-  
-  /*FOOTER*/
-  footer{
-    background-image: url("../assets/img/fundopreto.png");
-    background-repeat: repeat;
-    background-size: contain;
-    background-position: right;
-    font-size: 13px;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--quasepreto);
-   
-  } 
-  #cnpj{
-    font-size: 12px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #cadeado{
-    margin-right: 150px;
-  }
-  #logosredes{
-    display: flex;
-    justify-content: space-around;
-  }
-  #logosredes > a{
-    margin-right: 20px;
-  }
-  
-
-
-  
+header{
+	border-bottom: solid 3px rgba(3, 3, 3, 0.3);
+}
+.carousel-item{
+	height: 20rem;
+	background: rgba(248, 240, 175);
+	color: rgb(0, 41, 48);
+	position: relative;
+	background-position: center;
+	background-size: cover;
+}
+.carousel-itemDF{
+	height: 32rem;
+	background: rgba(0, 41, 48);
+	color: rgb(248, 240, 175);
+}
+.carousel-itemFH{
+	height: 32rem;
+	background: rgba(0, 41, 48);
+	color: rgb(248, 240, 175);
+}
+.carousel-itemFV{
+	height: 42rem;
+	background: rgba(0, 41, 48);
+	color: rgb(248, 240, 175);
+}
+.container{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-bottom: 50px;
+}
+.overlay-image{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.5;
+}
+#primeira{
+	padding-bottom: 2px;
+}
+.titulosublinhado{
+	border-bottom: solid 3px rgb(248, 240, 175, 0.3);
+}
+#terceira{
+	background-color: white;
+}
+.colunaEsquerda{
+	width: 80vw;
+	display: block;
+}
+.colunaDireita{
+	background-color: white;
+	display: block;
+	position: right;
+	width: 10vw;
+	height: auto;
+	background-image: url(../assets/img/logoAEALcores.png);
+	background-repeat: repeat-y;
+	background-size: contain;
+	background-position: top;
+}
+.conjuntoPrincipal{
+	display: flex;
+	font-size: 0.9rem;
+}
+.paragfinal{
+	display: inline-block;
+	margin-bottom: 0;
+	padding-bottom: 5px;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 0.9rem;
+}
+.paragfinal span{
+	padding: 0 0;
+}
+.secundaria{
+	color: white;
+}
+.secundaria h3{
+	color: rgb(248, 240, 175);
+}
+#contato{
+	background-image: url(../assets/img/fundosecondary.svg);
+	background-repeat: repeat;
+	background-size: 0.2vw;
+	background-position: right;
+}
+#contato a{
+	text-decoration: none;
+	color: aquamarine;
+}
+#contato span{
+	margin-bottom: 1px;
+}
+.contatos{
+	min-width: 125px;
+}
+#desde1952{
+	text-align: center;
+	font-size: small;
+}
+footer{
+	width: 100vw;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+}
+footer img {
+	margin: 15px;
+}
